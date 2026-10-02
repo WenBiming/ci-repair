@@ -104,14 +104,25 @@ head commit before quoting numbers.
   failures after the model's training cutoff for the main evaluation.
 - Speed: compile only the affected package (`cargo check -p`, `go build ./pkg/...`).
 
+## Pipeline (2026-10-02)
+
+Project chosen (provisionally, pending examiner): meilisearch/meilisearch. The pipeline
+is the `ci_repair` package; usage, definitions and known differences from CI are in
+README.md. Run `.venv/bin/python -m pytest -q tests` after changing parsers.
+- Licence: repo is MIT + BUSL-1.1 "Enterprise Edition"; enterprise jobs are excluded.
+  Needs the examiner's OK.
+- Disk: Mac has ~40 GB free; Docker target volumes grow large. Full-scale runs better
+  on a Linux machine. `docker volume ls | grep ci-repair` to inspect/clean.
+- Rerun `ci-repair collect` at least monthly so logs are archived before they expire;
+  `data/*/logs/` is git-ignored, so back it up separately.
+
 ## Next steps
 
-1. Run the screening script; shortlist 2-3 projects; sample those more heavily.
-2. Confirm with the examiner: definition of build failure / rate denominator, and
-   whether the agentic comparison is in scope.
-3. Start archiving CI logs of the chosen project.
-4. Write the Docker-based reproduction harness (steps 2-3 above).
-5. Rewrite both proposals around the new project and a new hypothesis.
+1. Confirm with the examiner: meilisearch + enterprise exclusion; definition of build
+   failure / rate denominator; whether the agentic comparison is in scope.
+2. Measure the reproduction rate on a sample, fix the main causes of non-reproduction.
+3. Add the LLM repairers (single-shot, agentic) behind the `Repairer` interface.
+4. Rewrite both proposals around meilisearch and a new hypothesis.
 
 ## Preference
 
