@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# GitHub API cache and raw logs (large, regenerable)
+results/cache/
+results/*.log
+data/logs/
+work/

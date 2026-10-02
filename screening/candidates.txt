@@ -1,0 +1,41 @@
+# Candidate repositories for screening. One owner/repo per line; '#' starts a comment.
+# Starting guesses only -- chosen for: GitHub Actions CI, open-source license,
+# 1-2 dominant languages, a single main build tool, no hardware dependence,
+# high PR volume. The screening numbers decide; expect most to be ruled out.
+
+# --- Rust / Cargo (JSON diagnostics, Cargo.lock) ---
+astral-sh/ruff
+astral-sh/uv
+nushell/nushell
+helix-editor/helix
+bevyengine/bevy
+tokio-rs/tokio
+rust-lang/rust-analyzer
+starship/starship
+tauri-apps/tauri
+meilisearch/meilisearch
+
+# --- Go / go build (simple, strict compiler) ---
+gohugoio/hugo
+prometheus/prometheus
+hashicorp/terraform
+etcd-io/etcd
+cli/cli
+gitea/gitea
+traefik/traefik
+
+# --- Java / Maven or Gradle ---
+apache/commons-lang
+spring-projects/spring-boot
+apache/dubbo
+alibaba/nacos
+
+# --- TypeScript / tsc ---
+microsoft/TypeScript
+vitejs/vite
+angular/angular
+
+# --- C / C++ (single build system) ---
+redis/redis
+curl/curl
+neovim/neovim
