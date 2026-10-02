@@ -1,0 +1,645 @@
+{
+ "id": 31375034553,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "c9789b17c2ad1722c85ac8e74c508e947d7585a6",
+ "head_branch": "revert-some-search-progress-traces",
+ "head_repo": "meilisearch/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-10T09:31:58Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31375034553",
+ "jobs": [
+  {
+   "id": 93412239678,
+   "name": "Tests on windows-2022",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run dtolnay/rust-toolchain@1.91.1",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239691,
+   "name": "Build in release",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run dtolnay/rust-toolchain@1.91.1",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Build",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239698,
+   "name": "Tests on ubuntu-22.04",
+   "conclusion": "cancelled",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Setup test with Rust stable",
+     "conclusion": "cancelled"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239703,
+   "name": "Tests on ubuntu-22.04-arm --features enterprise",
+   "conclusion": "cancelled",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Setup test with Rust stable",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "cancelled"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239719,
+   "name": "Test with Ollama",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Install Ollama",
+     "conclusion": "success"
+    },
+    {
+     "name": "Start serving",
+     "conclusion": "success"
+    },
+    {
+     "name": "Pull nomic-embed-text & all-minilm",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239722,
+   "name": "Tests on ubuntu-22.04-arm",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Setup test with Rust stable",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239725,
+   "name": "Tests on windows-2022",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run dtolnay/rust-toolchain@1.91.1",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239735,
+   "name": "Tests on ubuntu-22.04 --features enterprise",
+   "conclusion": "cancelled",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Setup test with Rust stable",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "cancelled"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239759,
+   "name": "Test legacy settings indexer",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v5",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Setup test with Rust stable",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v5",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239790,
+   "name": "Run Clippy (--features enterprise)",
+   "conclusion": "cancelled",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run dtolnay/rust-toolchain@1.91.1",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo clippy",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239843,
+   "name": "Run Clippy",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run dtolnay/rust-toolchain@1.91.1",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo clippy",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239845,
+   "name": "Run declarative tests",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run dtolnay/rust-toolchain@1.91.1",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run declarative tests",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412239871,
+   "name": "Run Rustfmt",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run dtolnay/rust-toolchain@1.91.1",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo fmt",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 93412240126,
+   "name": "Test disabled tokenization",
+   "conclusion": "skipped",
+   "steps": []
+  },
+  {
+   "id": 93412240194,
+   "name": "Tests almost all features",
+   "conclusion": "skipped",
+   "steps": []
+  },
+  {
+   "id": 93412266161,
+   "name": "Tests on ${{ matrix.os }}",
+   "conclusion": "skipped",
+   "steps": []
+  }
+ ]
+}

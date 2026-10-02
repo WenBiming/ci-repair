@@ -1,0 +1,603 @@
+{
+ "id": 36690480685,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "6ef941b98ccbf86621e742b5cf2280bae60da6f2",
+ "head_branch": "mutexify-dbi-open",
+ "head_repo": "meilisearch/meilisearch",
+ "pull_requests": [
+  6654
+ ],
+ "created_at": "2026-09-30T08:33:50Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/36690480685",
+ "jobs": [
+  {
+   "id": 109806242339,
+   "name": "Test legacy settings indexer",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242622,
+   "name": "Test with Ollama",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Install Ollama",
+     "conclusion": "success"
+    },
+    {
+     "name": "Start serving",
+     "conclusion": "success"
+    },
+    {
+     "name": "Pull nomic-embed-text & all-minilm",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242637,
+   "name": "Run declarative tests",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run declarative tests",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242696,
+   "name": "Tests on windows-2022",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242715,
+   "name": "Tests on ubuntu-22.04-arm --features enterprise",
+   "conclusion": "cancelled",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "cancelled"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242746,
+   "name": "Build in release",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Build",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242751,
+   "name": "Run Clippy (--features enterprise)",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo clippy",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242770,
+   "name": "Tests on ubuntu-22.04",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242788,
+   "name": "Tests on windows-2022",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242804,
+   "name": "Tests on ubuntu-22.04-arm",
+   "conclusion": "cancelled",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "cancelled"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242813,
+   "name": "Run Clippy",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo clippy",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242852,
+   "name": "Tests on ubuntu-22.04 --features enterprise",
+   "conclusion": "cancelled",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space before",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "check free space after",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo build without any default features",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo test",
+     "conclusion": "cancelled"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806242881,
+   "name": "Run Rustfmt",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Clean space as per https://github.com/actions/virtual-environments/issues/709",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run cargo fmt",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  },
+  {
+   "id": 109806243482,
+   "name": "Tests almost all features",
+   "conclusion": "skipped",
+   "steps": []
+  },
+  {
+   "id": 109806244437,
+   "name": "Tests on ${{ matrix.os }}",
+   "conclusion": "skipped",
+   "steps": []
+  },
+  {
+   "id": 109806244603,
+   "name": "Test disabled tokenization",
+   "conclusion": "skipped",
+   "steps": []
+  }
+ ]
+}

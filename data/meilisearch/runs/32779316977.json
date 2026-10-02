@@ -1,0 +1,15 @@
+{
+ "id": 32779316977,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "9d2bcc92edb098a44a5b725e62baaa4f60d4153b",
+ "head_branch": "main",
+ "head_repo": "mmustafasenoglu/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-24T21:24:25Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/32779316977",
+ "jobs": []
+}

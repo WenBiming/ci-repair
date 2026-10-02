@@ -1,0 +1,15 @@
+{
+ "id": 33371540168,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "136a9f0048d1f5e37a7a252a63c75e3e58525f3d",
+ "head_branch": "docker-apk-upgrade-fix-cves",
+ "head_repo": "925-oss/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-31T08:09:09Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/33371540168",
+ "jobs": []
+}

@@ -1,0 +1,15 @@
+{
+ "id": 33955124087,
+ "workflow": ".github/workflows/check-openapi-file.yml",
+ "name": "Check OpenAPI file",
+ "event": "pull_request",
+ "head_sha": "c12f9061a49dcf7154b8f3f05372145167e15b04",
+ "head_branch": "fix/add-facet-bulk-tracing",
+ "head_repo": "Ibra106i/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-09-05T08:23:25Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/33955124087",
+ "jobs": []
+}

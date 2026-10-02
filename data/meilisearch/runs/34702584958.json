@@ -1,0 +1,15 @@
+{
+ "id": 34702584958,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "f415cf0e72bda86f46dbdcc6449a05be932f62f4",
+ "head_branch": "fix-6578-search-queue-double-permit-release",
+ "head_repo": "Tyagiquamar/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-09-12T15:33:25Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/34702584958",
+ "jobs": []
+}

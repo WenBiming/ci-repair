@@ -48,6 +48,7 @@ def compile_failures(project, run, data_dir):
         excluded = bool(project.excluded_job and project.excluded_job.search(job["name"]))
         out.append({
             "run_id": run["id"],
+            "workflow": run["workflow"],
             "job_id": job["id"],
             "job": job["name"],
             "step": step,
@@ -88,8 +89,10 @@ def group_cases(project, data_dir):
     cases = []
     for (head, base), g in groups.items():
         first = min(g["runs"].values(), key=lambda r: r["created_at"])
-        pr = next((j["checkout"]["pr"] for j in g["jobs"] if j["checkout"]), None) \
-            or (first["pull_requests"] or [None])[0]
+        pr = next((j["checkout"]["pr"] for j in g["jobs"] if j["checkout"]), None)
+        if pr is None and first["event"] == "pull_request":
+            # For other events GitHub may list unrelated (e.g. fork) PRs here.
+            pr = (first["pull_requests"] or [None])[0]
         tag = f"pr{pr}" if pr else first["event"]
         usable = [j for j in g["jobs"] if not j["excluded"] and j["cargo_args"]]
         errors = {tuple(sorted(e.items())): e for j in usable for e in j["errors"]}
@@ -125,35 +128,44 @@ def _job_compiles(project, job, data_dir):
 
 
 def find_fix(gh, project, case, data_dir):
-    """First later run on the same branch where all compile-failing jobs compile."""
+    """First later commit on the same branch where all compile-failing jobs compile.
+
+    A tree can fail in several workflows, so for each later commit the runs of all
+    the failing jobs' workflows are considered together.
+    """
     if case["event"] not in ("pull_request", "schedule", "push", "workflow_dispatch"):
         return None, f"no fix search for event {case['event']}"
-    failing_jobs = {j["job"] for j in case["jobs"] if not j["excluded"] and j["cargo_args"]}
-    if not failing_jobs:
+    usable = [j for j in case["jobs"] if not j["excluded"] and j["cargo_args"]]
+    failing = {(j["workflow"], j["job"]) for j in usable}
+    if not failing:
         return None, "no usable failing jobs"
-    runs = gh.paginate(
-        f"/repos/{project.owner}/{project.repo}/actions/workflows/"
-        f"{Path(case['workflow']).name}/runs",
-        {"branch": case["head_branch"], "event": case["event"]}, item_key="workflow_runs",
-        fresh=True, max_pages=5)
-    later = sorted((r for r in runs
-                    if r["created_at"] > case["created_at"]
-                    and r["head_sha"] != case["head_sha"]
-                    and r["status"] == "completed"
-                    and (r.get("head_repository") or {}).get("full_name") == case["head_repo"]),
-                   key=lambda r: r["created_at"])
-    for run in later:
-        rec = fetch_run(gh, project, run["id"], data_dir)
-        jobs = {j["name"]: j for j in rec["jobs"]}
-        verdicts = [_job_compiles(project, jobs[n], data_dir) if n in jobs else None
-                    for n in failing_jobs]
+    workflows = {w for w, _ in failing}
+    runs = gh.paginate(f"/repos/{project.owner}/{project.repo}/actions/runs",
+                       {"branch": case["head_branch"], "event": case["event"]},
+                       item_key="workflow_runs", fresh=True, max_pages=5)
+    by_sha = defaultdict(list)
+    for r in runs:
+        if (r["path"].split("@")[0] in workflows
+                and r["created_at"] > case["created_at"]
+                and r["head_sha"] != case["head_sha"]
+                and r["status"] == "completed"
+                and (r.get("head_repository") or {}).get("full_name") == case["head_repo"]):
+            by_sha[r["head_sha"]].append(r)
+    for sha, sha_runs in sorted(by_sha.items(), key=lambda kv: min(r["created_at"] for r in kv[1])):
+        jobs = {}
+        for run in sorted(sha_runs, key=lambda r: r["created_at"]):
+            rec = fetch_run(gh, project, run["id"], data_dir)
+            for j in rec["jobs"]:
+                jobs[(rec["workflow"], j["name"])] = j  # latest attempt wins
+        verdicts = [_job_compiles(project, jobs[k], data_dir) if k in jobs else None
+                    for k in failing]
         if False in verdicts:
             continue  # still broken
         if all(verdicts):
-            fix = {"head_sha": run["head_sha"], "run_id": run["id"],
-                   "created_at": run["created_at"], "base_sha": None}
-            # Base of the merge commit CI built, from any job's checkout log.
-            job = jobs[sorted(failing_jobs)[0]]
+            fix = {"head_sha": sha, "run_ids": [r["id"] for r in sha_runs],
+                   "created_at": min(r["created_at"] for r in sha_runs), "base_sha": None}
+            # Base of the merge commit CI built, from one job's checkout log.
+            job = jobs[sorted(failing)[0]]
             log = gh.download_log(project.owner, project.repo, job["id"],
                                   log_path(data_dir, job["id"]))
             co = parse_checkout(log or "")

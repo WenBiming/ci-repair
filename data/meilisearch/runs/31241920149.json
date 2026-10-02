@@ -1,0 +1,15 @@
+{
+ "id": 31241920149,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "9deeef2978ea4285109334079e2166057670caca",
+ "head_branch": "fix/docker-signal-and-rand-upgrade",
+ "head_repo": "RinZ27/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-08T05:32:37Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31241920149",
+ "jobs": []
+}

@@ -1,0 +1,15 @@
+{
+ "id": 34493377267,
+ "workflow": ".github/workflows/check-openapi-file.yml",
+ "name": "Check OpenAPI file",
+ "event": "pull_request",
+ "head_sha": "8803a5288374b5a1fec3cddaf4930766977a765e",
+ "head_branch": "fix-6596-geo-rtree-cache",
+ "head_repo": "harriteja/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-09-10T15:05:38Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/34493377267",
+ "jobs": []
+}

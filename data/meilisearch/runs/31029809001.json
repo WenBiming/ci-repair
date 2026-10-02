@@ -1,0 +1,15 @@
+{
+ "id": 31029809001,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "5d9b99f6e70a676e6953bec07c363fcd8de7dfeb",
+ "head_branch": "docs/add-sourcey-api-reference",
+ "head_repo": "0xConsole/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-05T17:23:39Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31029809001",
+ "jobs": []
+}

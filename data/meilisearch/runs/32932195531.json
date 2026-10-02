@@ -1,0 +1,15 @@
+{
+ "id": 32932195531,
+ "workflow": ".github/workflows/check-openapi-file.yml",
+ "name": "Check OpenAPI file",
+ "event": "pull_request",
+ "head_sha": "786a52deebbfb5dca5cedbd9de0aead6e9422dcb",
+ "head_branch": "fix-tasks-documents-ndjson",
+ "head_repo": "waterWang/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-26T04:57:53Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/32932195531",
+ "jobs": []
+}

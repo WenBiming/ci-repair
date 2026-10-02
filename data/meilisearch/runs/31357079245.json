@@ -1,0 +1,15 @@
+{
+ "id": 31357079245,
+ "workflow": ".github/workflows/check-openapi-file.yml",
+ "name": "Check OpenAPI file",
+ "event": "pull_request",
+ "head_sha": "dc5eeb0c62b8089498a3e2ca26d83656af2d18fe",
+ "head_branch": "fix-snapshot-map-size-alignment",
+ "head_repo": "vigneshakaviki/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-10T04:56:58Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31357079245",
+ "jobs": []
+}

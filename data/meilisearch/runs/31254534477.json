@@ -1,0 +1,15 @@
+{
+ "id": 31254534477,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "b8cad9452c55bc3a80907830cd893e3f0f6da298",
+ "head_branch": "fix/6577-searchqueue-refill-increment",
+ "head_repo": "abdulwaarith0/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-08T11:14:37Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31254534477",
+ "jobs": []
+}

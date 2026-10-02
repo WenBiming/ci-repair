@@ -1,0 +1,15 @@
+{
+ "id": 31099713756,
+ "workflow": ".github/workflows/test-suite.yml",
+ "name": "Test suite",
+ "event": "pull_request",
+ "head_sha": "84e87135c387e076aeb2f556deecbf5941b13c91",
+ "head_branch": "musl-detection-download-script",
+ "head_repo": "Joshuaisikah/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-06T12:02:19Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31099713756",
+ "jobs": []
+}

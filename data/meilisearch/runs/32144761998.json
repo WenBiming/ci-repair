@@ -1,0 +1,15 @@
+{
+ "id": 32144761998,
+ "workflow": ".github/workflows/check-openapi-file.yml",
+ "name": "Check OpenAPI file",
+ "event": "pull_request",
+ "head_sha": "9ad2d046fce2b97aab50aecdeeef7d533a4e229c",
+ "head_branch": "fix-max-words-fst-size",
+ "head_repo": "serhiy-bzhezytskyy/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-08-18T13:51:01Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/32144761998",
+ "jobs": []
+}

@@ -70,6 +70,13 @@ class Repo:
                 return dest, "merge conflict"
         return dest, None
 
+    def is_ancestor(self, older, newer):
+        """True if `newer` builds on `older` (False e.g. for a force-push back)."""
+        for sha in (older, newer):
+            self.ensure_commit(sha)
+        return sh(["git", "merge-base", "--is-ancestor", older, newer], cwd=self.path,
+                  check=False).returncode == 0
+
     def remove_tree(self, dest):
         if Path(dest).exists():
             sh(["git", "worktree", "remove", "--force", str(dest)], cwd=self.path, check=False)
@@ -228,6 +235,9 @@ def reproduce_case(case, project, repo, docker, out_dir, keep_tree=False):
         return result
 
     fix_tree = None
+    if case.get("fix"):
+        # A "fix" that is not a descendant of the failing head is usually a revert.
+        result["fix_is_descendant"] = repo.is_ancestor(case["head_sha"], case["fix"]["head_sha"])
     try:
         for args, ci_errors in arg_sets(case).items():
             packages = {package_of(tree, e["file"]) for e in ci_errors} - {None}

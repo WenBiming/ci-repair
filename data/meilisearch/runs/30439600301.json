@@ -1,0 +1,95 @@
+{
+ "id": 30439600301,
+ "workflow": ".github/workflows/check-openapi-file.yml",
+ "name": "Check OpenAPI file",
+ "event": "pull_request",
+ "head_sha": "61fe18337af3e834593991b83a2487f63461ad9e",
+ "head_branch": "sse-routes-tasks-batches",
+ "head_repo": "meilisearch/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-07-29T09:25:52Z",
+ "run_attempt": 1,
+ "conclusion": "success",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/30439600301",
+ "jobs": [
+  {
+   "id": 90535448643,
+   "name": "Check OpenAPI specification",
+   "conclusion": "success",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Setup Rust",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Setup Node.js",
+     "conclusion": "success"
+    },
+    {
+     "name": "Install OpenAPI tools",
+     "conclusion": "success"
+    },
+    {
+     "name": "Generate OpenAPI file",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check all routes have summaries",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check all routes have descriptions",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check for duplicate or malformed paths",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check OpenAPI documentation (routes, params, response examples, schema properties)",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check query and body params have explicit required = true/false",
+     "conclusion": "success"
+    },
+    {
+     "name": "Validate OpenAPI schema",
+     "conclusion": "success"
+    },
+    {
+     "name": "Lint OpenAPI specification",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Setup Node.js",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Post Run actions/checkout@v6",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "id": 35086233752,
+ "workflow": ".github/workflows/check-openapi-file.yml",
+ "name": "Check OpenAPI file",
+ "event": "pull_request",
+ "head_sha": "81b2da361e15f9c42353c9dcbfc780a4e0c1b53d",
+ "head_branch": "mcp-route",
+ "head_repo": "meilisearch/meilisearch",
+ "pull_requests": [],
+ "created_at": "2026-09-16T10:40:19Z",
+ "run_attempt": 1,
+ "conclusion": "failure",
+ "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/35086233752",
+ "jobs": [
+  {
+   "id": 104761594349,
+   "name": "Check OpenAPI specification",
+   "conclusion": "failure",
+   "steps": [
+    {
+     "name": "Set up job",
+     "conclusion": "success"
+    },
+    {
+     "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Cache dependencies",
+     "conclusion": "success"
+    },
+    {
+     "name": "Setup Node.js",
+     "conclusion": "success"
+    },
+    {
+     "name": "Install OpenAPI tools",
+     "conclusion": "success"
+    },
+    {
+     "name": "Generate OpenAPI file",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check all routes have summaries",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check all routes have descriptions",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check for duplicate or malformed paths",
+     "conclusion": "success"
+    },
+    {
+     "name": "Check OpenAPI documentation (routes, params, response examples, schema properties)",
+     "conclusion": "failure"
+    },
+    {
+     "name": "Check query and body params have explicit required = true/false",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Validate OpenAPI schema",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Lint OpenAPI specification",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Setup Node.js",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Cache dependencies",
+     "conclusion": "skipped"
+    },
+    {
+     "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+     "conclusion": "success"
+    },
+    {
+     "name": "Complete job",
+     "conclusion": "success"
+    }
+   ]
+  }
+ ]
+}
