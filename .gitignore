@@ -10,3 +10,4 @@ work/
 data/.cache/
 data/*/logs/
 data/*.log
+*.egg-info/
