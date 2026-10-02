@@ -29,3 +29,7 @@ def test_package_and_toolchain(tmp_path):
     assert package_of(tmp_path, "crates/milli/src/update/mod.rs") == "milli"
     assert package_of(tmp_path, "build.rs") is None
     assert toolchain_version(tmp_path) == "1.98.1"
+
+
+def test_build_error_without_diagnostics():
+    assert compare([e("E0308", "a.rs", 1)], [], "build_error")["verdict"] == "build_error"

@@ -39,8 +39,8 @@ class Repo:
 
     def __init__(self, project, work_dir):
         self.project = project
-        self.path = Path(work_dir) / project.repo
-        self.trees = Path(work_dir) / "trees"
+        self.path = (Path(work_dir) / project.repo).resolve()
+        self.trees = (Path(work_dir) / "trees").resolve()
 
     def ensure_clone(self):
         if not (self.path / ".git").exists():
@@ -118,6 +118,8 @@ class Docker:
         self.project = project
         self.registry = f"ci-repair-{project.repo}-cargo-registry"
         self.gitdeps = f"ci-repair-{project.repo}-cargo-git"
+        # Files that build scripts download (e.g. lindera dictionaries), kept across cases.
+        self.assets = f"ci-repair-{project.repo}-assets"
 
     def image(self, version):
         tag = f"ci-repair-rust:{version}"
@@ -135,6 +137,7 @@ class Docker:
                 "-v", f"{self.registry}:/usr/local/cargo/registry",
                 "-v", f"{self.gitdeps}:/usr/local/cargo/git",
                 "-v", f"{target}:/target",
+                "-v", f"{self.assets}:/assets",
                 "-v", f"{Path(tree).resolve()}:/src"]
         if not network:
             args += ["--network", "none"]
@@ -144,19 +147,29 @@ class Docker:
 
 
 def build(docker, tree, cargo_args):
-    """Fetch deps, then compile offline. Returns a result dict."""
+    """Fetch deps, warm up with network, then compile offline. Returns a result dict.
+
+    The warm-up check lets build scripts download what they need (lindera fetches
+    dictionaries at build time). The offline check that follows recompiles the
+    crates that failed, so its diagnostics are complete, and shows that the result
+    does not depend on the network beyond the cached downloads.
+    """
     version = toolchain_version(tree)
     t0 = time.time()
     fetch = docker.run(version, tree, ["cargo", "fetch", "--locked"])
     if fetch.returncode != 0:
         return {"toolchain": version, "status": "fetch_failed", "stderr": fetch.stderr[-4000:],
                 "seconds": round(time.time() - t0)}
+    warm = docker.run(version, tree, ["cargo", "check", "--locked", *cargo_args])
+    warm_seconds = round(time.time() - t0)
     check = docker.run(version, tree, ["cargo", "check", "--locked", "--offline",
                                        "--message-format=json", *cargo_args], network=False)
     errors = [d for d in from_cargo_json(check.stdout) if d.is_compile_error]
     return {
         "toolchain": version,
-        "status": "ok" if check.returncode == 0 else "failed",
+        "status": "ok" if check.returncode == 0 else "failed" if errors else "build_error",
+        "warmup_exit_code": warm.returncode,
+        "warmup_seconds": warm_seconds,
         "exit_code": check.returncode,
         "cargo_args": list(cargo_args),
         "errors": [d.to_dict() for d in errors],
@@ -172,11 +185,11 @@ def _key(e):
     return (e["code"], e["file"], e["line"])
 
 
-def compare(ci_errors, local_errors):
+def compare(ci_errors, local_errors, build_status="failed"):
     ci = {_key(e) for e in ci_errors}
     local = {_key(e) for e in local_errors}
     if not local:
-        verdict = "no_error"
+        verdict = "build_error" if build_status == "build_error" else "no_error"
     elif ci <= local:
         verdict = "exact"
     elif ci & local:
@@ -222,7 +235,7 @@ def reproduce_case(case, project, repo, docker, out_dir, keep_tree=False):
             print(f"    failing tree: cargo check {' '.join(cargo_args)}", flush=True)
             fail = build(docker, tree, cargo_args)
             entry = {"cargo_args": cargo_args, "fail": _summary(fail),
-                     "match": compare(ci_errors, fail.get("errors", []))}
+                     "match": compare(ci_errors, fail.get("errors", []), fail["status"])}
             _store_output(out_dir, case["id"], "fail", fail)
             if case.get("fix"):
                 if fix_tree is None:
@@ -252,7 +265,7 @@ def reproduce_case(case, project, repo, docker, out_dir, keep_tree=False):
 
 
 def _summary(build_result):
-    keep = ("toolchain", "status", "exit_code", "seconds")
+    keep = ("toolchain", "status", "exit_code", "warmup_exit_code", "warmup_seconds", "seconds")
     s = {k: build_result.get(k) for k in keep if k in build_result}
     s["errors"] = build_result.get("errors", [])
     if build_result.get("status") != "ok":

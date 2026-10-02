@@ -52,7 +52,9 @@ MEILISEARCH = Project(
     default_cargo_args=("--workspace", "--all-targets"),
     # Enterprise Edition code is under BUSL-1.1, not an open-source licence.
     excluded_job=re.compile(r"--features enterprise|enterprise", re.I),
-    env={"RUST_BACKTRACE": "1"},
+    env={"RUST_BACKTRACE": "1",
+         # lindera build scripts download dictionaries; cache them in the assets volume.
+         "LINDERA_BUILD_DICTIONARY_CACHE_DIR": "/assets/lindera"},
 )
 
 PROJECTS = {"meilisearch": MEILISEARCH}
