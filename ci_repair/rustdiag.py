@@ -12,6 +12,7 @@ Kinds:
 
 import json
 import re
+from pathlib import PurePosixPath as Path
 from dataclasses import asdict, dataclass
 
 TS_PREFIX = re.compile(r"^\d{4}-\d\d-\d\dT[\d:.]+Z ?", re.M)
@@ -132,6 +133,17 @@ def from_ci_log(text):
     return out
 
 
+def _call_site(span):
+    """Follow macro expansions out of dependency code to the project's call site.
+
+    rustc's text output (as in CI logs) reports such errors where the macro is used,
+    while the JSON primary span points into the macro's own (dependency) source.
+    """
+    while span.get("expansion") and Path(span["file_name"]).is_absolute():
+        span = span["expansion"]["span"]
+    return span
+
+
 def from_cargo_json(text):
     """Error diagnostics from `cargo ... --message-format=json` output."""
     out, seen = [], set()
@@ -148,6 +160,7 @@ def from_cargo_json(text):
         span = next((s for s in msg.get("spans", []) if s.get("is_primary")), None)
         if not span:
             continue
+        span = _call_site(span)
         code = (msg.get("code") or {}).get("code")
         children = "\n".join(c.get("message", "") for c in msg.get("children", []))
         if code and re.fullmatch(r"E\d{4}", code):

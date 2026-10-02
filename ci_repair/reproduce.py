@@ -13,6 +13,7 @@ and the fix tree compiles.
 
 import gzip
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -69,13 +70,6 @@ class Repo:
             if r.returncode != 0:
                 return dest, "merge conflict"
         return dest, None
-
-    def is_ancestor(self, older, newer):
-        """True if `newer` builds on `older` (False e.g. for a force-push back)."""
-        for sha in (older, newer):
-            self.ensure_commit(sha)
-        return sh(["git", "merge-base", "--is-ancestor", older, newer], cwd=self.path,
-                  check=False).returncode == 0
 
     def remove_tree(self, dest):
         if Path(dest).exists():
@@ -153,6 +147,24 @@ class Docker:
         return sh([*args, image, *cmd], check=False, timeout=timeout)
 
 
+def touch_sources(tree):
+    """Set every file's mtime to now.
+
+    All trees are mounted at /src and share one target dir, and cargo decides
+    freshness by mtime alone. Without this, a tree checked out before another tree
+    was built looks older than that build's output and cargo silently reuses it
+    (seen: a failing tree reported "ok" with the fix tree's artifacts).
+    """
+    now = time.time()
+    for root, dirs, files in os.walk(tree):
+        dirs[:] = [d for d in dirs if d != ".git"]
+        for f in files:
+            try:
+                os.utime(os.path.join(root, f), (now, now), follow_symlinks=False)
+            except OSError:
+                pass
+
+
 def build(docker, tree, cargo_args):
     """Fetch deps, warm up with network, then compile offline. Returns a result dict.
 
@@ -163,6 +175,7 @@ def build(docker, tree, cargo_args):
     """
     version = toolchain_version(tree)
     t0 = time.time()
+    touch_sources(tree)
     fetch = docker.run(version, tree, ["cargo", "fetch", "--locked"])
     if fetch.returncode != 0:
         return {"toolchain": version, "status": "fetch_failed", "stderr": fetch.stderr[-4000:],
@@ -235,18 +248,15 @@ def reproduce_case(case, project, repo, docker, out_dir, keep_tree=False):
         return result
 
     fix_tree = None
-    if case.get("fix"):
-        # A "fix" that is not a descendant of the failing head is usually a revert.
-        result["fix_is_descendant"] = repo.is_ancestor(case["head_sha"], case["fix"]["head_sha"])
     try:
-        for args, ci_errors in arg_sets(case).items():
+        for n, (args, ci_errors) in enumerate(arg_sets(case).items()):
             packages = {package_of(tree, e["file"]) for e in ci_errors} - {None}
             cargo_args = scoped_args(args, packages)
             print(f"    failing tree: cargo check {' '.join(cargo_args)}", flush=True)
             fail = build(docker, tree, cargo_args)
             entry = {"cargo_args": cargo_args, "fail": _summary(fail),
                      "match": compare(ci_errors, fail.get("errors", []), fail["status"])}
-            _store_output(out_dir, case["id"], "fail", fail)
+            _store_output(out_dir, case["id"], f"fail{n}", fail)
             if case.get("fix"):
                 if fix_tree is None:
                     fix_tree, err = repo.make_tree(case["id"] + "-fix", case["fix"]["head_sha"],
@@ -257,7 +267,7 @@ def reproduce_case(case, project, repo, docker, out_dir, keep_tree=False):
                     print(f"    fix tree:     cargo check {' '.join(cargo_args)}", flush=True)
                     fix = build(docker, fix_tree, cargo_args)
                     entry["fix"] = _summary(fix)
-                    _store_output(out_dir, case["id"], "fix", fix)
+                    _store_output(out_dir, case["id"], f"fix{n}", fix)
             result["runs"].append(entry)
     finally:
         if not keep_tree:

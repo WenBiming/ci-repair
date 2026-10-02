@@ -152,6 +152,12 @@ def find_fix(gh, project, case, data_dir):
                 and (r.get("head_repository") or {}).get("full_name") == case["head_repo"]):
             by_sha[r["head_sha"]].append(r)
     for sha, sha_runs in sorted(by_sha.items(), key=lambda kv: min(r["created_at"] for r in kv[1])):
+        # Skip reruns of older commits and force-pushes back (reverts, not fixes):
+        # a fix must add commits. "diverged" is fine (amend + force-push).
+        rel = gh.get_json(f"/repos/{project.owner}/{project.repo}/compare/"
+                          f"{case['head_sha']}...{sha}")
+        if not rel or rel.get("ahead_by", 0) == 0:
+            continue
         jobs = {}
         for run in sorted(sha_runs, key=lambda r: r["created_at"]):
             rec = fetch_run(gh, project, run["id"], data_dir)
@@ -162,7 +168,9 @@ def find_fix(gh, project, case, data_dir):
         if False in verdicts:
             continue  # still broken
         if all(verdicts):
-            fix = {"head_sha": sha, "run_ids": [r["id"] for r in sha_runs],
+            fix = {"head_sha": sha, "relation": rel["status"],
+                   "ahead_by": rel["ahead_by"], "behind_by": rel["behind_by"],
+                   "run_ids": [r["id"] for r in sha_runs],
                    "created_at": min(r["created_at"] for r in sha_runs), "base_sha": None}
             # Base of the merge commit CI built, from one job's checkout log.
             job = jobs[sorted(failing)[0]]

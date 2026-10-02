@@ -33,3 +33,16 @@ def test_package_and_toolchain(tmp_path):
 
 def test_build_error_without_diagnostics():
     assert compare([e("E0308", "a.rs", 1)], [], "build_error")["verdict"] == "build_error"
+
+
+def test_touch_sources_skips_git(tmp_path):
+    import os
+    from ci_repair.reproduce import touch_sources
+    (tmp_path / ".git").mkdir()
+    (tmp_path / ".git" / "HEAD").write_text("x")
+    (tmp_path / "a.rs").write_text("x")
+    for p in (tmp_path / ".git" / "HEAD", tmp_path / "a.rs"):
+        os.utime(p, (1000, 1000))
+    touch_sources(tmp_path)
+    assert (tmp_path / "a.rs").stat().st_mtime > 1000
+    assert (tmp_path / ".git" / "HEAD").stat().st_mtime == 1000

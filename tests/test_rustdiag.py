@@ -122,3 +122,18 @@ def test_repeated_lints_without_note_are_still_lints():
         ("rustc_lint", "unused_imports"),     # known message prefix
         ("rustc_lint", "deprecated"),
     ]
+
+
+def test_cargo_json_macro_error_reported_at_call_site():
+    rec = {"reason": "compiler-message", "message": {
+        "level": "error", "message": "use of deprecated function `f`", "code": {"code": "deprecated"},
+        "children": [],
+        "spans": [{
+            "file_name": "/usr/local/cargo/registry/src/index.crates.io-x/wip-0.2.0/src/lib.rs",
+            "line_start": 171, "column_start": 9, "is_primary": True,
+            "expansion": {"span": {
+                "file_name": "crates/milli/src/dynamic_search_rules.rs",
+                "line_start": 80, "column_start": 5, "expansion": None}},
+        }]}}
+    (d,) = from_cargo_json(json.dumps(rec))
+    assert (d.file, d.line, d.col) == ("crates/milli/src/dynamic_search_rules.rs", 80, 5)
