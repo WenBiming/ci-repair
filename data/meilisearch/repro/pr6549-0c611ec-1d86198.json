@@ -1,0 +1,131 @@
+{
+ "id": "pr6549-0c611ec-1d86198",
+ "started": "2026-10-02T21:05:38",
+ "runs": [
+  {
+   "cargo_args": [
+    "--all-targets",
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.91.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 12,
+    "seconds": 24,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DynamicSearchRulesView::<'a>::resolve_actions::fixme`: write migration for DSRs to accomodate to new actions syntax",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 80,
+      "col": 9
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.53.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 1 previous error\nwarning: build failed, waiting for other jobs to finish...\nerror: could not compile `milli` (lib test) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 17,
+    "seconds": 18,
+    "errors": []
+   }
+  },
+  {
+   "cargo_args": [
+    "--no-default-features",
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.91.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 9,
+    "seconds": 16,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DynamicSearchRulesView::<'a>::resolve_actions::fixme`: write migration for DSRs to accomodate to new actions syntax",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 80,
+      "col": 9
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.53.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 9,
+    "seconds": 10,
+    "errors": []
+   }
+  },
+  {
+   "cargo_args": [
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.91.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 10,
+    "seconds": 19,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DynamicSearchRulesView::<'a>::resolve_actions::fixme`: write migration for DSRs to accomodate to new actions syntax",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 80,
+      "col": 9
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.53.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 9,
+    "seconds": 10,
+    "errors": []
+   }
+  }
+ ],
+ "reproduced_failure": true,
+ "fix_compiles": true,
+ "status": "reproduced"
+}

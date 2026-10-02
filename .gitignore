@@ -11,3 +11,4 @@ data/.cache/
 data/*/logs/
 data/*.log
 *.egg-info/
+data/*/repro/raw/

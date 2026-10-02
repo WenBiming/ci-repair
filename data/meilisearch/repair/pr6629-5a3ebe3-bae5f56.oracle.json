@@ -1,0 +1,30 @@
+{
+ "id": "pr6629-5a3ebe3-bae5f56",
+ "repairer": "oracle",
+ "budget": 5,
+ "started": "2026-10-02T21:23:53",
+ "attempts": [
+  {
+   "number": 1,
+   "patch": "diff --git a/crates/meilisearch/src/routes/mcp.rs b/crates/meilisearch/src/routes/mcp.rs\nindex 5b592e677..a720473a7 100644\n--- a/crates/meilisearch/src/routes/mcp.rs\n+++ b/crates/meilisearch/src/routes/mcp.rs\n@@ -95,11 +95,11 @@ async fn mcp(\n     let body = body.into_inner();\n     let McpQuery { jsonrpc, id, method, params } = body;\n \n-    let response = match method {\n-        McpMethod::ServerDiscover => {\n-            McpResponse { jsonrpc, id, result: Some(McpResult::discover()), error: None }\n+    let response = match method.as_str() {\n+        method::SERVER_DISCOVERY => {\n+            dbg!(McpResponse { jsonrpc, id, result: Some(McpResult::discover()), error: None })\n         }\n-        McpMethod::ToolsList => match McpResult::list_tools() {\n+        method::TOOLS_LIST => match McpResult::list_tools() {\n             Ok(list_tools) => McpResponse { jsonrpc, id, result: Some(list_tools), error: None },\n             Err(err) => {\n                 return Ok(HttpResponse::Ok().json(McpResponse {\n@@ -110,13 +110,13 @@ async fn mcp(\n                 }))\n             }\n         },\n-        McpMethod::ResourcesList => {\n+        method::RESOURCES_LIST => {\n             McpResponse { jsonrpc, id, result: Some(McpResult::empty_resources()), error: None }\n         }\n-        McpMethod::PromptsList => {\n+        method::PROMPTS_LIST => {\n             McpResponse { jsonrpc, id, result: Some(McpResult::empty_prompts()), error: None }\n         }\n-        McpMethod::ToolsCall => match params.name.as_deref() {\n+        method::TOOLS_CALL => match params.name.as_deref() {\n             Some(SearchInIndexes::NAME) => {\n                 match SearchInIndexes::call(\n                     request,\n@@ -628,7 +628,7 @@ pub struct McpQuery {\n     ///\n     /// You can find more information about this field on [the JSON-RPC specification](https://www.jsonrpc.org/specification#request_object).\n     #[request(required)]\n-    method: McpMethod,\n+    method: String, // e.g., server/discover, tools/list, resources/list\n     /// The parameters to call the method with following the JSON-RPC format.\n     ///\n     /// You can find more information about this field on [the JSON-RPC specification](https://www.jsonrpc.org/specification#request_object).\n@@ -636,21 +636,6 @@ pub struct McpQuery {\n     params: ParamsWithMeta,\n }\n \n-#[routes::request]\n-#[derive(Debug, Clone)]\n-pub enum McpMethod {\n-    #[request(rename = \"server/discover\")]\n-    ServerDiscover,\n-    #[request(rename = \"tools/list\")]\n-    ToolsList,\n-    #[request(rename = \"resources/list\")]\n-    ResourcesList,\n-    #[request(rename = \"prompts/list\")]\n-    PromptsList,\n-    #[request(rename = \"tools/call\")]\n-    ToolsCall,\n-}\n-\n // Note that I would have rather refused unknown fields\n // but online playgrounds provide more fields than expected\n // <https://mcpplaygroundonline.com>\n",
+   "applied": true,
+   "status": "ok",
+   "errors": [],
+   "seconds": 29.509244203567505
+  }
+ ],
+ "initial": {
+  "status": "failed",
+  "errors": [
+   {
+    "kind": "rustc",
+    "code": "E0308",
+    "message": "mismatched types",
+    "file": "crates/meilisearch/src/routes/mcp.rs",
+    "line": 193,
+    "col": 49
+   }
+  ]
+ },
+ "status": "repaired"
+}

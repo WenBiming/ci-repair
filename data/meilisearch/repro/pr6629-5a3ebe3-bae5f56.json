@@ -1,0 +1,131 @@
+{
+ "id": "pr6629-5a3ebe3-bae5f56",
+ "started": "2026-10-02T21:10:28",
+ "runs": [
+  {
+   "cargo_args": [
+    "-p",
+    "meilisearch"
+   ],
+   "fail": {
+    "toolchain": "1.98.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 21,
+    "seconds": 29,
+    "errors": [
+     {
+      "kind": "rustc",
+      "code": "E0308",
+      "message": "mismatched types",
+      "file": "crates/meilisearch/src/routes/mcp.rs",
+      "line": 193,
+      "col": 49
+     }
+    ],
+    "stderr_tail": "warning: build-info@1.54.0: vergen: not within a suitable 'git' worktree!\n    Checking meilisearch v1.54.0 (/src/crates/meilisearch)\nerror: could not compile `meilisearch` (lib) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 23,
+    "seconds": 25,
+    "errors": []
+   }
+  },
+  {
+   "cargo_args": [
+    "--all-targets",
+    "-p",
+    "meilisearch"
+   ],
+   "fail": {
+    "toolchain": "1.98.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 23,
+    "seconds": 33,
+    "errors": [
+     {
+      "kind": "rustc",
+      "code": "E0308",
+      "message": "mismatched types",
+      "file": "crates/meilisearch/src/routes/mcp.rs",
+      "line": 193,
+      "col": 49
+     }
+    ],
+    "stderr_tail": "warning: build-info@1.54.0: vergen: not within a suitable 'git' worktree!\n    Checking meilisearch v1.54.0 (/src/crates/meilisearch)\nerror: could not compile `meilisearch` (lib) due to 1 previous error\nwarning: build failed, waiting for other jobs to finish...\nerror: could not compile `meilisearch` (lib test) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 54,
+    "seconds": 56,
+    "errors": []
+   }
+  },
+  {
+   "cargo_args": [
+    "--no-default-features",
+    "-p",
+    "meilisearch"
+   ],
+   "fail": {
+    "toolchain": "1.98.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 20,
+    "seconds": 28,
+    "errors": [
+     {
+      "kind": "rustc",
+      "code": "E0308",
+      "message": "mismatched types",
+      "file": "crates/meilisearch/src/routes/mcp.rs",
+      "line": 193,
+      "col": 49
+     }
+    ],
+    "stderr_tail": "warning: build-info@1.54.0: vergen: not within a suitable 'git' worktree!\n    Checking meilisearch v1.54.0 (/src/crates/meilisearch)\nerror: could not compile `meilisearch` (lib) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 20,
+    "seconds": 22,
+    "errors": []
+   }
+  }
+ ],
+ "reproduced_failure": true,
+ "fix_compiles": true,
+ "status": "reproduced"
+}

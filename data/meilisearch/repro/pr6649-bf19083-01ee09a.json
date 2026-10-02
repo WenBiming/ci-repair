@@ -1,0 +1,131 @@
+{
+ "id": "pr6649-bf19083-01ee09a",
+ "started": "2026-10-02T21:21:28",
+ "runs": [
+  {
+   "cargo_args": [
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.98.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 9,
+    "seconds": 17,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "unused_imports",
+      "message": "unused import: `std::io::Cursor`",
+      "file": "crates/milli/src/search/facet/facet_distribution.rs",
+      "line": 4,
+      "col": 5
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.54.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 9,
+    "seconds": 10,
+    "errors": []
+   }
+  },
+  {
+   "cargo_args": [
+    "--no-default-features",
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.98.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 9,
+    "seconds": 16,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "unused_imports",
+      "message": "unused import: `std::io::Cursor`",
+      "file": "crates/milli/src/search/facet/facet_distribution.rs",
+      "line": 4,
+      "col": 5
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.54.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 11,
+    "seconds": 12,
+    "errors": []
+   }
+  },
+  {
+   "cargo_args": [
+    "--all-targets",
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.98.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 18,
+    "seconds": 32,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "unused_imports",
+      "message": "unused import: `std::io::Cursor`",
+      "file": "crates/milli/src/search/facet/facet_distribution.rs",
+      "line": 4,
+      "col": 5
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.54.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 1 previous error\nwarning: build failed, waiting for other jobs to finish...\nerror: could not compile `milli` (lib test) due to 1 previous error\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 1,
+    "local": 1,
+    "matched": 1
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 14,
+    "seconds": 15,
+    "errors": []
+   }
+  }
+ ],
+ "reproduced_failure": true,
+ "fix_compiles": true,
+ "status": "reproduced"
+}

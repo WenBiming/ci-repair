@@ -116,11 +116,19 @@ README.md. Run `.venv/bin/python -m pytest -q tests` after changing parsers.
 - Rerun `ci-repair collect` at least monthly so logs are archived before they expire;
   `data/*/logs/` is git-ignored, so back it up separately.
 
+Status 2026-10-02: 340 failed runs archived (90 days) -> 53 cases, 48 usable, 39 with a
+human fix (33 of them after amend + force-push). First 10 reproduced cases: 10/10 exact
+(but only 3 PRs). Harness check: oracle repaired 3/3, noop 0/1.
+Bugs found and fixed on the way (worth a sentence in the thesis method): stale cargo
+artifacts across trees mounted at the same path (mtime freshness), macro spans pointing
+into dependencies, "fixes" that were reverts/reruns, build scripts needing network.
+
 ## Next steps
 
 1. Confirm with the examiner: meilisearch + enterprise exclusion; definition of build
    failure / rate denominator; whether the agentic comparison is in scope.
-2. Measure the reproduction rate on a sample, fix the main causes of non-reproduction.
+2. Reproduce all 39 cases (`ci-repair reproduce`); check the dataset is not dominated
+   by a few PRs (report cases per PR); grow it by rerunning collect over time.
 3. Add the LLM repairers (single-shot, agentic) behind the `Repairer` interface.
 4. Rewrite both proposals around meilisearch and a new hypothesis.
 

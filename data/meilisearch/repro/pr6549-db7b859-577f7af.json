@@ -1,0 +1,251 @@
+{
+ "id": "pr6549-db7b859-577f7af",
+ "started": "2026-10-02T21:02:45",
+ "runs": [
+  {
+   "cargo_args": [
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.91.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 9,
+    "seconds": 16,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DynamicSearchRulesView::<'a>::resolve_actions::fixme`: write migration for DSRs to accomodate to new actions syntax",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 80,
+      "col": 9
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DsrFuel::max_scale_actions::fixme`: add as an env var",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 845,
+      "col": 9
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: check that the filter doesn't contain any foreign + is parseable at rule update time",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 983,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: ignore errors stemming from index misconfiguration",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 989,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: check that the filter doesn't contain any foreign + is parseable at rule update time",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 1018,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `search::Search::<'a>::execute::fixme`: 4. stop when out of fuel",
+      "file": "crates/milli/src/search/mod.rs",
+      "line": 467,
+      "col": 25
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.53.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 6 previous errors\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 6,
+    "local": 6,
+    "matched": 6
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 8,
+    "seconds": 9,
+    "errors": []
+   }
+  },
+  {
+   "cargo_args": [
+    "--all-targets",
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.91.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 11,
+    "seconds": 22,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DynamicSearchRulesView::<'a>::resolve_actions::fixme`: write migration for DSRs to accomodate to new actions syntax",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 80,
+      "col": 9
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DsrFuel::max_scale_actions::fixme`: add as an env var",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 845,
+      "col": 9
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: check that the filter doesn't contain any foreign + is parseable at rule update time",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 983,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: ignore errors stemming from index misconfiguration",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 989,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: check that the filter doesn't contain any foreign + is parseable at rule update time",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 1018,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `search::Search::<'a>::execute::fixme`: 4. stop when out of fuel",
+      "file": "crates/milli/src/search/mod.rs",
+      "line": 467,
+      "col": 25
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.53.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 6 previous errors\nwarning: build failed, waiting for other jobs to finish...\nerror: could not compile `milli` (lib test) due to 6 previous errors\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 6,
+    "local": 6,
+    "matched": 6
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 12,
+    "seconds": 13,
+    "errors": []
+   }
+  },
+  {
+   "cargo_args": [
+    "--no-default-features",
+    "-p",
+    "milli"
+   ],
+   "fail": {
+    "toolchain": "1.91.1",
+    "status": "failed",
+    "exit_code": 101,
+    "warmup_exit_code": 101,
+    "warmup_seconds": 8,
+    "seconds": 15,
+    "errors": [
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DynamicSearchRulesView::<'a>::resolve_actions::fixme`: write migration for DSRs to accomodate to new actions syntax",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 80,
+      "col": 9
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::DsrFuel::max_scale_actions::fixme`: add as an env var",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 845,
+      "col": 9
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: check that the filter doesn't contain any foreign + is parseable at rule update time",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 983,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: ignore errors stemming from index misconfiguration",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 989,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `dynamic_search_rules::ScaleAction::active_documents::fixme`: check that the filter doesn't contain any foreign + is parseable at rule update time",
+      "file": "crates/milli/src/dynamic_search_rules.rs",
+      "line": 1018,
+      "col": 17
+     },
+     {
+      "kind": "rustc_lint",
+      "code": "deprecated",
+      "message": "use of deprecated function `search::Search::<'a>::execute::fixme`: 4. stop when out of fuel",
+      "file": "crates/milli/src/search/mod.rs",
+      "line": 467,
+      "col": 25
+     }
+    ],
+    "stderr_tail": "    Checking milli v1.53.1 (/src/crates/milli)\nerror: could not compile `milli` (lib) due to 6 previous errors\n"
+   },
+   "match": {
+    "verdict": "exact",
+    "ci": 6,
+    "local": 6,
+    "matched": 6
+   },
+   "fix": {
+    "toolchain": "1.98.1",
+    "status": "ok",
+    "exit_code": 0,
+    "warmup_exit_code": 0,
+    "warmup_seconds": 8,
+    "seconds": 9,
+    "errors": []
+   }
+  }
+ ],
+ "reproduced_failure": true,
+ "fix_compiles": true,
+ "status": "reproduced"
+}

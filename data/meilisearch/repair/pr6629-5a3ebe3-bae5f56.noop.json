@@ -1,0 +1,56 @@
+{
+ "id": "pr6629-5a3ebe3-bae5f56",
+ "repairer": "noop",
+ "budget": 2,
+ "started": "2026-10-02T21:25:43",
+ "attempts": [
+  {
+   "number": 1,
+   "patch": "",
+   "applied": false,
+   "status": "empty_patch",
+   "errors": [
+    {
+     "kind": "rustc",
+     "code": "E0308",
+     "message": "mismatched types",
+     "file": "crates/meilisearch/src/routes/mcp.rs",
+     "line": 193,
+     "col": 49
+    }
+   ],
+   "seconds": 7.867813110351562e-06
+  },
+  {
+   "number": 2,
+   "patch": "",
+   "applied": false,
+   "status": "empty_patch",
+   "errors": [
+    {
+     "kind": "rustc",
+     "code": "E0308",
+     "message": "mismatched types",
+     "file": "crates/meilisearch/src/routes/mcp.rs",
+     "line": 193,
+     "col": 49
+    }
+   ],
+   "seconds": 8.106231689453125e-06
+  }
+ ],
+ "initial": {
+  "status": "failed",
+  "errors": [
+   {
+    "kind": "rustc",
+    "code": "E0308",
+    "message": "mismatched types",
+    "file": "crates/meilisearch/src/routes/mcp.rs",
+    "line": 193,
+    "col": 49
+   }
+  ]
+ },
+ "status": "unrepaired"
+}
