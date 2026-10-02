@@ -1,6 +1,6 @@
 import json
 
-from ci_repair.rustdiag import clean_log, from_cargo_json, from_ci_log, parse_merge_line
+from ci_repair.rustdiag import clean_log, from_cargo_json, from_ci_log, parse_checkout
 
 CI_LOG = """\
 2026-09-16T12:31:29.5379709Z HEAD is now at d2d9e88 Merge 5a3ebe351eed598661ca247119be23c1c6943dce into bae5f5658eb988358f01ba6186d08015723ecc60
@@ -52,12 +52,14 @@ def test_compile_errors_exclude_clippy():
     assert [d.kind for d in diags if d.is_compile_error] == ["rustc", "rustc_lint", "rustc_nocode"]
 
 
-def test_merge_line():
-    assert parse_merge_line(CI_LOG) == (
-        "5a3ebe351eed598661ca247119be23c1c6943dce",
-        "bae5f5658eb988358f01ba6186d08015723ecc60",
-    )
-    assert parse_merge_line("no checkout here") is None
+def test_parse_checkout():
+    log = "git checkout --progress --force refs/remotes/pull/6629/merge\n" + CI_LOG
+    assert parse_checkout(log) == {
+        "pr": 6629,
+        "head": "5a3ebe351eed598661ca247119be23c1c6943dce",
+        "base": "bae5f5658eb988358f01ba6186d08015723ecc60",
+    }
+    assert parse_checkout("no checkout here") is None
 
 
 def test_clean_log_strips_timestamps_and_ansi():

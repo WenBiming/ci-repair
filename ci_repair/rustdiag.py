@@ -21,6 +21,7 @@ LOCATION = re.compile(r"^\s*--> (.+?):(\d+):(\d+)\s*$")
 LINT_FLAG = re.compile(r"`-D ([\w:-]+)` implied by|`#\[deny\(([\w:]+)\)\]`")
 CLIPPY_URL = re.compile(r"rust-clippy/[^#\s]*#(\w+)")
 MERGE = re.compile(r"HEAD is now at \w+ Merge ([0-9a-f]{40}) into ([0-9a-f]{40})")
+PR_REF = re.compile(r"refs/remotes/pull/(\d+)/merge")
 # cargo/rustc summary lines that look like errors but carry no diagnostic
 SUMMARY = re.compile(r"^(could not compile|aborting due to|build failed|"
                      r"failed to run custom build command|process didn't exit)")
@@ -165,7 +166,10 @@ def from_cargo_json(text):
     return out
 
 
-def parse_merge_line(text):
-    """(head_sha, base_sha) of the merge commit actions/checkout built, if logged."""
+def parse_checkout(text):
+    """{pr, head, base} of the PR merge commit actions/checkout built, if logged."""
     m = MERGE.search(text)
-    return (m.group(1), m.group(2)) if m else None
+    if not m:
+        return None
+    pr = PR_REF.search(text)
+    return {"pr": int(pr.group(1)) if pr else None, "head": m.group(1), "base": m.group(2)}

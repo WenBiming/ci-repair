@@ -7,3 +7,6 @@ results/cache/
 results/*.log
 data/logs/
 work/
+data/.cache/
+data/*/logs/
+data/*.log
