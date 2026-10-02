@@ -1,0 +1,923 @@
+{
+  "repo": "curl/curl",
+  "license": "NOASSERTION",
+  "stars": 42988,
+  "languages": {
+    "C": 0.754,
+    "Perl": 0.078,
+    "Python": 0.055,
+    "M4": 0.043,
+    "CMake": 0.026,
+    "DIGITAL Command Language": 0.02,
+    "Shell": 0.013,
+    "Makefile": 0.01,
+    "Batchfile": 0.001,
+    "Roff": 0.0,
+    "Dockerfile": 0.0,
+    "C++": 0.0,
+    "Emacs Lisp": 0.0
+  },
+  "significant_languages": [
+    "C"
+  ],
+  "ci_workflows": [
+    "",
+    ".github/workflows/macos.yml",
+    ".github/workflows/linux.yml",
+    ".github/workflows/distcheck.yml",
+    ".github/workflows/appveyor-status.yml",
+    ".github/workflows/configure-vs-cmake.yml",
+    ".github/workflows/linux-old.yml",
+    ".github/workflows/curl-for-win.yml",
+    ".github/workflows/non-native.yml",
+    ".github/workflows/windows.yml",
+    ".github/workflows/http3-linux.yml",
+    ".github/workflows/checksrc.yml",
+    ".github/workflows/checkdocs.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    ".github/workflows/checkurls.yml",
+    "dynamic/agents/copilot-pull-request-reviewer"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/label.yml",
+    ".github/workflows/codeql.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/github-code-scanning/codeql",
+    "dynamic/dependabot/update-graph",
+    "dynamic/github-code-quality/codeql"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/macos.yml",
+      "runs": 3232,
+      "failed": 304,
+      "pr_runs": 2586,
+      "pr_failed": 275
+    },
+    {
+      "path": ".github/workflows/linux.yml",
+      "runs": 3372,
+      "failed": 526,
+      "pr_runs": 2669,
+      "pr_failed": 407
+    },
+    {
+      "path": ".github/workflows/distcheck.yml",
+      "runs": 3419,
+      "failed": 177,
+      "pr_runs": 2704,
+      "pr_failed": 162
+    },
+    {
+      "path": ".github/workflows/appveyor-status.yml",
+      "runs": 9692,
+      "failed": 14,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/configure-vs-cmake.yml",
+      "runs": 440,
+      "failed": 27,
+      "pr_runs": 384,
+      "pr_failed": 26
+    },
+    {
+      "path": ".github/workflows/linux-old.yml",
+      "runs": 3250,
+      "failed": 159,
+      "pr_runs": 2586,
+      "pr_failed": 154
+    },
+    {
+      "path": ".github/workflows/curl-for-win.yml",
+      "runs": 3250,
+      "failed": 172,
+      "pr_runs": 2586,
+      "pr_failed": 155
+    },
+    {
+      "path": ".github/workflows/non-native.yml",
+      "runs": 3249,
+      "failed": 429,
+      "pr_runs": 2585,
+      "pr_failed": 344
+    },
+    {
+      "path": ".github/workflows/windows.yml",
+      "runs": 3249,
+      "failed": 631,
+      "pr_runs": 2585,
+      "pr_failed": 462
+    },
+    {
+      "path": ".github/workflows/http3-linux.yml",
+      "runs": 3250,
+      "failed": 451,
+      "pr_runs": 2586,
+      "pr_failed": 368
+    },
+    {
+      "path": ".github/workflows/checksrc.yml",
+      "runs": 3384,
+      "failed": 246,
+      "pr_runs": 2677,
+      "pr_failed": 228
+    },
+    {
+      "path": ".github/workflows/checkdocs.yml",
+      "runs": 863,
+      "failed": 75,
+      "pr_runs": 712,
+      "pr_failed": 73
+    },
+    {
+      "path": ".github/workflows/checkurls.yml",
+      "runs": 3509,
+      "failed": 48,
+      "pr_runs": 2704,
+      "pr_failed": 3
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 691,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 44850,
+  "failed": 3260,
+  "fail_rate": 0.073,
+  "pr_runs": 27364,
+  "pr_failed": 2657,
+  "pr_fail_rate": 0.097,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 19,
+  "compile_share_of_failures": 0.316,
+  "est_compile_failures": 1029,
+  "est_compile_fail_rate": 0.023,
+  "failed_step_categories": {
+    "lint": 2,
+    "build": 24,
+    "other": 8,
+    "test": 4
+  },
+  "compilers_seen": {
+    "gcc_clang": 13,
+    "linker": 10
+  },
+  "samples": [
+    {
+      "run_id": 31800818969,
+      "event": "pull_request",
+      "workflow": ".github/workflows/checksrc.yml",
+      "created_at": "2026-08-14T12:33:11Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/31800818969",
+      "jobs": [
+        {
+          "job": "spellcheck, linters, REUSE",
+          "failed_steps": [
+            "codespell"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31799266564,
+      "event": "pull_request",
+      "workflow": ".github/workflows/linux.yml",
+      "created_at": "2026-08-14T12:11:16Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/31799266564",
+      "jobs": [
+        {
+          "job": "CM boringssl",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "CM awslc",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "AM awslc",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31121293016,
+      "event": "pull_request",
+      "workflow": ".github/workflows/macos.yml",
+      "created_at": "2026-08-06T16:51:51Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/31121293016",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30225845679,
+      "event": "pull_request",
+      "workflow": ".github/workflows/curl-for-win.yml",
+      "created_at": "2026-07-26T23:43:17Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/30225845679",
+      "jobs": [
+        {
+          "job": "macOS clang cares (x86_64)",
+          "failed_steps": [
+            "build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Windows llvm (x64)",
+          "failed_steps": [
+            "build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Linux llvm MUSL (amd64, riscv64)",
+          "failed_steps": [
+            "build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 32360712227,
+      "event": "pull_request",
+      "workflow": ".github/workflows/linux-old.yml",
+      "created_at": "2026-08-20T10:48:21Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/32360712227",
+      "jobs": [
+        {
+          "job": "autotools & cmake",
+          "failed_steps": [
+            "CM build-only build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 31477271885,
+      "event": "pull_request",
+      "workflow": ".github/workflows/configure-vs-cmake.yml",
+      "created_at": "2026-08-11T09:20:36Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/31477271885",
+      "jobs": [
+        {
+          "job": "Windows",
+          "failed_steps": [
+            "compare generated libcurl.pc files"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Linux",
+          "failed_steps": [
+            "compare generated libcurl.pc files"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33698421811,
+      "event": "pull_request",
+      "workflow": ".github/workflows/linux.yml",
+      "created_at": "2026-09-03T00:11:20Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/33698421811",
+      "jobs": [
+        {
+          "job": "AM openssl https-only",
+          "failed_steps": [
+            "run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31115942817,
+      "event": "push",
+      "workflow": ".github/workflows/linux.yml",
+      "created_at": "2026-08-06T15:27:44Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/31115942817",
+      "jobs": [
+        {
+          "job": "CM rustls valgrind 2",
+          "failed_steps": [
+            "Set up job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "AM awslc",
+          "failed_steps": [
+            "Set up job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "AM openssl !ipv6 !--libcurl !--digest-auth",
+          "failed_steps": [
+            "Set up job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36614132060,
+      "event": "pull_request",
+      "workflow": ".github/workflows/checksrc.yml",
+      "created_at": "2026-09-29T18:43:45Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/36614132060",
+      "jobs": [
+        {
+          "job": "misc checks",
+          "failed_steps": [
+            "actionlint",
+            "Wait for all background steps"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31803267852,
+      "event": "pull_request",
+      "workflow": ".github/workflows/http3-linux.yml",
+      "created_at": "2026-08-14T13:07:05Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/31803267852",
+      "jobs": [
+        {
+          "job": "AM openssl",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "CM libressl",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "CM quiche",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 30553484462,
+      "event": "pull_request",
+      "workflow": ".github/workflows/linux.yml",
+      "created_at": "2026-07-30T14:47:56Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/30553484462",
+      "jobs": [
+        {
+          "job": "AM libressl krb5",
+          "failed_steps": [
+            "build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "CM thread-sanitizer",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "CM mbedtls gss valgrind 2",
+          "failed_steps": [
+            "run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 36140424959,
+      "event": "pull_request",
+      "workflow": ".github/workflows/http3-linux.yml",
+      "created_at": "2026-09-25T13:21:20Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/36140424959",
+      "jobs": [
+        {
+          "job": "CM quiche",
+          "failed_steps": [
+            "build quiche and boringssl"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "AM quiche",
+          "failed_steps": [
+            "build quiche and boringssl"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30449395952,
+      "event": "push",
+      "workflow": ".github/workflows/windows.yml",
+      "created_at": "2026-07-29T11:54:29Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/30449395952",
+      "jobs": [
+        {
+          "job": "mingw, CM ucrt-x86_64 schannel U torture 1",
+          "failed_steps": [
+            "run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31506532667,
+      "event": "pull_request",
+      "workflow": ".github/workflows/macos.yml",
+      "created_at": "2026-08-11T15:21:01Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/31506532667",
+      "jobs": [
+        {
+          "job": "iOS, CM-Xcode libressl arm64",
+          "failed_steps": [
+            "libcurl.pc, curl-config"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "AM clang macos-26",
+          "failed_steps": [
+            "libcurl.pc, curl-config"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "CM clang macos-26",
+          "failed_steps": [
+            "libcurl.pc, curl-config"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31799266597,
+      "event": "pull_request",
+      "workflow": ".github/workflows/macos.yml",
+      "created_at": "2026-08-14T12:11:16Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/31799266597",
+      "jobs": [
+        {
+          "job": "iOS, CM-Xcode libressl arm64",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "CM clang LibreSSL !ldap +examples",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "AM clang OpenSSL SecTrust krb5",
+          "failed_steps": [
+            "build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30268874199,
+      "event": "pull_request",
+      "workflow": ".github/workflows/linux.yml",
+      "created_at": "2026-07-27T13:08:15Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/30268874199",
+      "jobs": [
+        {
+          "job": "CM awslc",
+          "failed_steps": [
+            "build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "CM libressl krb5 valgrind 2",
+          "failed_steps": [
+            "build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "AM awslc",
+          "failed_steps": [
+            "build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 32039171815,
+      "event": "status",
+      "workflow": ".github/workflows/appveyor-status.yml",
+      "created_at": "2026-08-17T14:28:43Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/32039171815",
+      "jobs": [
+        {
+          "job": "split",
+          "failed_steps": [
+            "Create individual AppVeyor build statuses"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30504585959,
+      "event": "pull_request",
+      "workflow": ".github/workflows/linux-old.yml",
+      "created_at": "2026-07-30T01:04:15Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/30504585959",
+      "jobs": [
+        {
+          "job": "autotools & cmake",
+          "failed_steps": [
+            "CM build tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "gcc_clang",
+            "linker"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 34280559096,
+      "event": "push",
+      "workflow": ".github/workflows/windows.yml",
+      "created_at": "2026-09-08T21:25:54Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/34280559096",
+      "jobs": [
+        {
+          "job": "mingw, AM ucrt-x86_64 wolfssl c-ares U",
+          "failed_steps": [
+            "run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36064857440,
+      "event": "push",
+      "workflow": ".github/workflows/http3-linux.yml",
+      "created_at": "2026-09-24T21:59:44Z",
+      "html_url": "https://github.com/curl/curl/actions/runs/36064857440",
+      "jobs": [
+        {
+          "job": "CM quiche",
+          "failed_steps": [
+            "build quiche and boringssl"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "AM quiche",
+          "failed_steps": [
+            "build quiche and boringssl"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

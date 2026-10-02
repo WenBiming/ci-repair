@@ -1,0 +1,864 @@
+{
+  "repo": "astral-sh/ruff",
+  "license": "MIT",
+  "stars": 49879,
+  "languages": {
+    "Rust": 0.969,
+    "Python": 0.023,
+    "TypeScript": 0.007,
+    "Shell": 0.001,
+    "CSS": 0.0,
+    "HTML": 0.0,
+    "Dockerfile": 0.0,
+    "RenderScript": 0.0
+  },
+  "significant_languages": [
+    "Rust"
+  ],
+  "ci_workflows": [
+    ".github/workflows/ci.yaml",
+    ".github/workflows/build-docker.yml",
+    ".github/workflows/build-binaries.yml",
+    ".github/workflows/daily_fuzz.yaml",
+    ".github/workflows/mypy_primer.yaml",
+    ".github/workflows/ty-ecosystem-analyzer.yaml",
+    ".github/workflows/ty-ecosystem-report.yaml",
+    ".github/workflows/typing_conformance.yaml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    ".github/workflows/build-wasm.yml",
+    ".github/workflows/memory_report.yaml",
+    ".github/workflows/reproduce-airflow-formatter-ecosystem-error.yaml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    ".github/workflows/pgo.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/release.yml",
+    ".github/workflows/sync_typeshed.yaml",
+    ".github/workflows/notify-dependents.yml",
+    ".github/workflows/publish-pypi.yml",
+    ".github/workflows/publish-docs.yml",
+    ".github/workflows/publish-playground.yml",
+    ".github/workflows/publish-wasm.yml",
+    ".github/workflows/publish-ty-playground.yml",
+    ".github/workflows/publish-versions.yml",
+    ".github/workflows/publish-mirror.yml",
+    "dynamic/dependabot/update-graph",
+    ".github/workflows/publish-crates.yml",
+    ".github/workflows/stress-vendored-typeshed-cache-race.yml",
+    ".github/workflows/windows-pgo-benchmark.yml",
+    ".github/workflows/release-prepare.yml",
+    ".github/workflows/depot-cache-mode-probe.yaml",
+    ".github/workflows/sync-ruff-security.yml",
+    ".github/workflows/ty-benchmark-diagnostics.yaml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yaml",
+      "runs": 11714,
+      "failed": 1568,
+      "pr_runs": 10308,
+      "pr_failed": 1498
+    },
+    {
+      "path": ".github/workflows/build-docker.yml",
+      "runs": 20,
+      "failed": 1,
+      "pr_runs": 20,
+      "pr_failed": 1
+    },
+    {
+      "path": ".github/workflows/build-binaries.yml",
+      "runs": 225,
+      "failed": 2,
+      "pr_runs": 225,
+      "pr_failed": 2
+    },
+    {
+      "path": ".github/workflows/daily_fuzz.yaml",
+      "runs": 127,
+      "failed": 0,
+      "pr_runs": 37,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/ty-ecosystem-analyzer.yaml",
+      "runs": 7580,
+      "failed": 201,
+      "pr_runs": 7237,
+      "pr_failed": 201
+    },
+    {
+      "path": ".github/workflows/ty-ecosystem-report.yaml",
+      "runs": 13,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/typing_conformance.yaml",
+      "runs": 7325,
+      "failed": 77,
+      "pr_runs": 7325,
+      "pr_failed": 77
+    },
+    {
+      "path": ".github/workflows/build-wasm.yml",
+      "runs": 6,
+      "failed": 0,
+      "pr_runs": 6,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/memory_report.yaml",
+      "runs": 7495,
+      "failed": 98,
+      "pr_runs": 7495,
+      "pr_failed": 98
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 10,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/pgo.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 1,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 34516,
+  "failed": 1947,
+  "fail_rate": 0.056,
+  "pr_runs": 32654,
+  "pr_failed": 1877,
+  "pr_fail_rate": 0.057,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 20,
+  "compile_share_of_failures": 0.5,
+  "est_compile_failures": 974,
+  "est_compile_fail_rate": 0.028,
+  "failed_step_categories": {
+    "other": 13,
+    "test": 20,
+    "build": 2,
+    "setup": 1
+  },
+  "compilers_seen": {
+    "rustc": 10
+  },
+  "samples": [
+    {
+      "run_id": 32897628701,
+      "event": "pull_request",
+      "workflow": ".github/workflows/typing_conformance.yaml",
+      "created_at": "2026-08-25T20:50:09Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/32897628701",
+      "jobs": [
+        {
+          "job": "Compute diagnostic diff",
+          "failed_steps": [
+            "Compute diagnostic diff"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29584386541,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-17T13:33:05Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29584386541",
+      "jobs": [
+        {
+          "job": "cargo test (linux, release)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (linux)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (depot-windows-2022-16)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29064541700,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-10T02:23:25Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29064541700",
+      "jobs": [
+        {
+          "job": "cargo shear",
+          "failed_steps": [
+            "Run cargo shear --deny-warnings"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33441603013,
+      "event": "pull_request",
+      "workflow": ".github/workflows/memory_report.yaml",
+      "created_at": "2026-08-31T21:29:21Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/33441603013",
+      "jobs": [
+        {
+          "job": "Compute memory usage diff",
+          "failed_steps": [
+            "Compute memory usage diff"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29749457709,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-20T14:10:20Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29749457709",
+      "jobs": [
+        {
+          "job": "cargo test (linux)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (depot-macos-15)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (linux, release)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29885679747,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-22T02:23:14Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29885679747",
+      "jobs": [
+        {
+          "job": "benchmarks walltime (pydantic|freqtrade|multithreaded|altair)",
+          "failed_steps": [
+            "Run benchmarks"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30048385756,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-23T22:01:17Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/30048385756",
+      "jobs": [
+        {
+          "job": "cargo test (linux, release)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (namespace-profile-macos-15)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29523999068,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-16T18:27:19Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29523999068",
+      "jobs": [
+        {
+          "job": "cargo publish dry-run",
+          "failed_steps": [
+            "cargo publish dry-run"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 33848116926,
+      "event": "pull_request",
+      "workflow": ".github/workflows/memory_report.yaml",
+      "created_at": "2026-09-04T07:18:22Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/33848116926",
+      "jobs": [
+        {
+          "job": "Compute memory usage diff",
+          "failed_steps": [
+            "Compute memory usage diff"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29604546930,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-17T18:38:11Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29604546930",
+      "jobs": [
+        {
+          "job": "cargo test (linux, release)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (depot-macos-15)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (linux)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29311422666,
+      "event": "pull_request",
+      "workflow": ".github/workflows/memory_report.yaml",
+      "created_at": "2026-07-14T06:27:43Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29311422666",
+      "jobs": [
+        {
+          "job": "Compute memory usage diff",
+          "failed_steps": [
+            "Compute memory usage diff"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 33442059636,
+      "event": "pull_request",
+      "workflow": ".github/workflows/memory_report.yaml",
+      "created_at": "2026-08-31T21:34:43Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/33442059636",
+      "jobs": [
+        {
+          "job": "Compute memory usage diff",
+          "failed_steps": [
+            "Compute memory usage diff"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 35219827420,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ty-ecosystem-analyzer.yaml",
+      "created_at": "2026-09-17T12:12:39Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/35219827420",
+      "jobs": [
+        {
+          "job": "Build ty (pr)",
+          "failed_steps": [
+            "Build ty"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 28944761667,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-08T13:03:32Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/28944761667",
+      "jobs": [
+        {
+          "job": "cargo test (linux)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (linux, release)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (depot-macos-15)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29043987173,
+      "event": "pull_request",
+      "workflow": ".github/workflows/typing_conformance.yaml",
+      "created_at": "2026-07-09T19:20:47Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29043987173",
+      "jobs": [
+        {
+          "job": "Compute diagnostic diff",
+          "failed_steps": [
+            "Compute diagnostic diff"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29407191456,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ty-ecosystem-analyzer.yaml",
+      "created_at": "2026-07-15T10:10:33Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29407191456",
+      "jobs": [
+        {
+          "job": "Build ty (pr)",
+          "failed_steps": [
+            "Build ty"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29059369275,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-10T00:11:41Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29059369275",
+      "jobs": [
+        {
+          "job": "cargo test (depot-macos-15)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (linux, release)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (linux)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29062403938,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-10T01:27:19Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/29062403938",
+      "jobs": [
+        {
+          "job": "cargo publish dry-run",
+          "failed_steps": [
+            "cargo publish dry-run"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "benchmarks instrumented ty (memory: projects)",
+          "failed_steps": [
+            "Run astral-sh/setup-uv@f98e06938123ccabd21905ea5d0069192241f9f1"
+          ],
+          "step_category": "setup",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 28897168170,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-07T20:40:30Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/28897168170",
+      "jobs": [
+        {
+          "job": "cargo test (linux)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (linux, release)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cargo test (depot-windows-2022-16)",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30057072825,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yaml",
+      "created_at": "2026-07-24T00:45:06Z",
+      "html_url": "https://github.com/astral-sh/ruff/actions/runs/30057072825",
+      "jobs": [
+        {
+          "job": "benchmarks instrumented ty (memory: micro)",
+          "failed_steps": [
+            "Run benchmarks"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "benchmarks instrumented ty (simulation: micro)",
+          "failed_steps": [
+            "Run benchmarks"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "benchmarks walltime (sympy)",
+          "failed_steps": [
+            "Run benchmarks"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "repo": "alibaba/nacos",
+  "license": "Apache-2.0",
+  "stars": 33422,
+  "languages": {
+    "Java": 0.939,
+    "TypeScript": 0.052,
+    "SCSS": 0.004,
+    "Shell": 0.002,
+    "JavaScript": 0.002,
+    "PLpgSQL": 0.001,
+    "PLSQL": 0.0,
+    "Batchfile": 0.0,
+    "Python": 0.0,
+    "Makefile": 0.0,
+    "EJS": 0.0
+  },
+  "significant_languages": [
+    "Java"
+  ],
+  "ci_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/pr-e2e-test.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/copilot-swe-agent/copilot",
+    ".github/workflows/anti-spam.yml",
+    ".github/workflows/pr-validation.yml",
+    ".github/workflows/it-new.yml",
+    ".github/workflows/frontend-ci.yml",
+    ".github/workflows/migration-it.yml",
+    ".github/workflows/default-auth-reliability-it.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/pr-comment.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/github-code-scanning/codeql",
+    ".github/workflows/stale.yml",
+    ".github/workflows/issue-assign.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 572,
+      "failed": 120,
+      "pr_runs": 389,
+      "pr_failed": 109
+    },
+    {
+      "path": "dynamic/copilot-swe-agent/copilot",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/anti-spam.yml",
+      "runs": 147,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/pr-validation.yml",
+      "runs": 488,
+      "failed": 5,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/it-new.yml",
+      "runs": 388,
+      "failed": 104,
+      "pr_runs": 388,
+      "pr_failed": 104
+    },
+    {
+      "path": ".github/workflows/frontend-ci.yml",
+      "runs": 572,
+      "failed": 63,
+      "pr_runs": 389,
+      "pr_failed": 62
+    },
+    {
+      "path": ".github/workflows/migration-it.yml",
+      "runs": 83,
+      "failed": 31,
+      "pr_runs": 83,
+      "pr_failed": 31
+    },
+    {
+      "path": ".github/workflows/default-auth-reliability-it.yml",
+      "runs": 3,
+      "failed": 2,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 2254,
+  "failed": 325,
+  "fail_rate": 0.144,
+  "pr_runs": 1249,
+  "pr_failed": 306,
+  "pr_fail_rate": 0.245,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 0,
+  "compile_share_of_failures": null,
+  "est_compile_failures": null,
+  "est_compile_fail_rate": null,
+  "failed_step_categories": {},
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 31766925000,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-14T03:28:49Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/31766925000",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29479808134,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-16T07:24:20Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/29479808134",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [],
+          "step_category": "other",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30628259373,
+      "event": "pull_request",
+      "workflow": ".github/workflows/it-new.yml",
+      "created_at": "2026-07-31T11:47:13Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/30628259373",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29065614662,
+      "event": "pull_request",
+      "workflow": ".github/workflows/it-new.yml",
+      "created_at": "2026-07-10T02:52:57Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/29065614662",
+      "jobs": [
+        {
+          "job": "OpenAPI, Java SDK and Maintainer SDK Integration Test",
+          "failed_steps": [],
+          "step_category": "test",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34983025320,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-15T14:38:38Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/34983025320",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32642454405,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-23T13:28:31Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/32642454405",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30874920434,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-04T03:29:59Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/30874920434",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [
+            "Build and Test with Maven Daemon"
+          ],
+          "step_category": "build",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35227037884,
+      "event": "pull_request",
+      "workflow": ".github/workflows/frontend-ci.yml",
+      "created_at": "2026-09-17T13:26:03Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/35227037884",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30440144187,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-29T09:33:54Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/30440144187",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [],
+          "step_category": "other",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34140605489,
+      "event": "pull_request",
+      "workflow": ".github/workflows/migration-it.yml",
+      "created_at": "2026-09-07T15:53:45Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/34140605489",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35226706321,
+      "event": "pull_request",
+      "workflow": ".github/workflows/it-new.yml",
+      "created_at": "2026-09-17T13:22:53Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/35226706321",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29454098764,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T22:03:36Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/29454098764",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [],
+          "step_category": "other",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29456403644,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T22:44:36Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/29456403644",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [],
+          "step_category": "other",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30260108529,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-27T10:58:14Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/30260108529",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [],
+          "step_category": "other",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35105349827,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-16T13:58:09Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/35105349827",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35499932866,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-20T08:34:34Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/35499932866",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33497801336,
+      "event": "pull_request",
+      "workflow": ".github/workflows/frontend-ci.yml",
+      "created_at": "2026-09-01T10:30:52Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/33497801336",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35228210138,
+      "event": "pull_request",
+      "workflow": ".github/workflows/migration-it.yml",
+      "created_at": "2026-09-17T13:37:12Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/35228210138",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29470120709,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-16T03:55:49Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/29470120709",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [],
+          "step_category": "other",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34857808602,
+      "event": "pull_request",
+      "workflow": ".github/workflows/frontend-ci.yml",
+      "created_at": "2026-09-14T14:46:27Z",
+      "html_url": "https://github.com/alibaba/nacos/actions/runs/34857808602",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    }
+  ]
+}

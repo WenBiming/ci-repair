@@ -1,0 +1,724 @@
+{
+  "repo": "bevyengine/bevy",
+  "license": "Apache-2.0",
+  "stars": 48542,
+  "languages": {
+    "Rust": 0.945,
+    "WGSL": 0.054,
+    "Go Template": 0.001,
+    "HTML": 0.0,
+    "Mermaid": 0.0
+  },
+  "significant_languages": [
+    "Rust"
+  ],
+  "ci_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/dependencies.yml",
+    ".github/workflows/validation-jobs.yml",
+    ".github/workflows/send-screenshots-to-pixeleagle.yml",
+    ".github/workflows/example-run.yml",
+    ".github/workflows/ci2.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    ".github/workflows/security-static-analysis.yml",
+    "dynamic/agents/copilot-pull-request-reviewer"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/docs.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/post-release.yml",
+    ".github/workflows/ci-comment-failures.yml",
+    ".github/workflows/welcome.yml",
+    ".github/workflows/action-on-PR-labeled.yml",
+    "dynamic/dependabot/dependabot-updates",
+    ".github/workflows/example-run-report.yml",
+    ".github/workflows/update-caches.yml",
+    ".github/workflows/pr-triage-label.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 4238,
+      "failed": 599,
+      "pr_runs": 3379,
+      "pr_failed": 525
+    },
+    {
+      "path": ".github/workflows/dependencies.yml",
+      "runs": 1163,
+      "failed": 135,
+      "pr_runs": 1053,
+      "pr_failed": 126
+    },
+    {
+      "path": ".github/workflows/validation-jobs.yml",
+      "runs": 4238,
+      "failed": 294,
+      "pr_runs": 3379,
+      "pr_failed": 6
+    },
+    {
+      "path": ".github/workflows/example-run.yml",
+      "runs": 4742,
+      "failed": 902,
+      "pr_runs": 3161,
+      "pr_failed": 308
+    },
+    {
+      "path": ".github/workflows/security-static-analysis.yml",
+      "runs": 3887,
+      "failed": 26,
+      "pr_runs": 3380,
+      "pr_failed": 23
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 4,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 18272,
+  "failed": 1956,
+  "fail_rate": 0.107,
+  "pr_runs": 14352,
+  "pr_failed": 988,
+  "pr_fail_rate": 0.069,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 19,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "other": 15,
+    "build": 15,
+    "lint": 1
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 32203249772,
+      "event": "merge_group",
+      "workflow": ".github/workflows/example-run.yml",
+      "created_at": "2026-08-19T00:58:38Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/32203249772",
+      "jobs": [
+        {
+          "job": "Compare Linux screenshots / Send screenshots to Pixel Eagle",
+          "failed_steps": [
+            "Send to Pixel Eagle"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31122688993,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-06T17:17:21Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/31122688993",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 28984164482,
+      "event": "merge_group",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T00:00:48Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/28984164482",
+      "jobs": [
+        {
+          "job": "build (ubuntu-latest)",
+          "failed_steps": [
+            "Build & run tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "ci",
+          "failed_steps": [
+            "CI job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "check-doc",
+          "failed_steps": [
+            "Build and check doc"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29227579177,
+      "event": "pull_request",
+      "workflow": ".github/workflows/dependencies.yml",
+      "created_at": "2026-07-13T05:56:57Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/29227579177",
+      "jobs": [
+        {
+          "job": "check-advisories",
+          "failed_steps": [
+            "Check for security advisories and unmaintained crates"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28825274376,
+      "event": "pull_request",
+      "workflow": ".github/workflows/dependencies.yml",
+      "created_at": "2026-07-06T21:43:06Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/28825274376",
+      "jobs": [
+        {
+          "job": "check-advisories",
+          "failed_steps": [
+            "Check for security advisories and unmaintained crates"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33381581229,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-31T10:15:28Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/33381581229",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [
+            "CI job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "typos",
+          "failed_steps": [
+            "Check for typos"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31280325107,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-08T21:51:33Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/31280325107",
+      "jobs": [
+        {
+          "job": "miri",
+          "failed_steps": [
+            "CI job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "build (ubuntu-latest)",
+          "failed_steps": [
+            "Build & run tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30326396012,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-28T03:36:43Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/30326396012",
+      "jobs": [
+        {
+          "job": "check-doc",
+          "failed_steps": [
+            "Build and check doc"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "ci",
+          "failed_steps": [
+            "CI job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29868783840,
+      "event": "pull_request",
+      "workflow": ".github/workflows/example-run.yml",
+      "created_at": "2026-07-21T21:09:00Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/29868783840",
+      "jobs": [
+        {
+          "job": "run-examples-macos-metal",
+          "failed_steps": [
+            "Run examples"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29748822149,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-20T14:01:47Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/29748822149",
+      "jobs": [
+        {
+          "job": "check-doc",
+          "failed_steps": [
+            "Build and check doc"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30233458886,
+      "event": "pull_request",
+      "workflow": ".github/workflows/example-run.yml",
+      "created_at": "2026-07-27T02:59:12Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/30233458886",
+      "jobs": [
+        {
+          "job": "run-examples-macos-metal",
+          "failed_steps": [
+            "Run examples"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36744459286,
+      "event": "merge_group",
+      "workflow": ".github/workflows/validation-jobs.yml",
+      "created_at": "2026-09-30T16:28:29Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/36744459286",
+      "jobs": [
+        {
+          "job": "check-unused-dependencies",
+          "failed_steps": [
+            "Run cargo udeps"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28864790340,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-07T12:05:41Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/28864790340",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [
+            "CI job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28900568284,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-07T21:39:53Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/28900568284",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [
+            "Install Linux dependencies"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "build (ubuntu-latest)",
+          "failed_steps": [
+            "Install Linux dependencies"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29634190285,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-18T06:33:13Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/29634190285",
+      "jobs": [
+        {
+          "job": "check-doc",
+          "failed_steps": [
+            "Build and check doc"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "ci",
+          "failed_steps": [
+            "CI job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "build (macos-latest)",
+          "failed_steps": [
+            "Build & run tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33444013236,
+      "event": "merge_group",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-31T21:58:53Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/33444013236",
+      "jobs": [
+        {
+          "job": "build (macos-latest)",
+          "failed_steps": [
+            "Build & run tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29079602793,
+      "event": "pull_request",
+      "workflow": ".github/workflows/dependencies.yml",
+      "created_at": "2026-07-10T08:23:07Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/29079602793",
+      "jobs": [
+        {
+          "job": "check-advisories",
+          "failed_steps": [
+            "Check for security advisories and unmaintained crates"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29471166970,
+      "event": "pull_request",
+      "workflow": ".github/workflows/example-run.yml",
+      "created_at": "2026-07-16T04:21:16Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/29471166970",
+      "jobs": [
+        {
+          "job": "run-examples-macos-metal",
+          "failed_steps": [
+            "Run examples"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30978360467,
+      "event": "merge_group",
+      "workflow": ".github/workflows/example-run.yml",
+      "created_at": "2026-08-05T05:31:18Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/30978360467",
+      "jobs": [
+        {
+          "job": "Compare Macos screenshots / Send screenshots to Pixel Eagle",
+          "failed_steps": [
+            "Send to Pixel Eagle"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Compare Linux screenshots / Send screenshots to Pixel Eagle",
+          "failed_steps": [
+            "Send to Pixel Eagle"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Compare Windows screenshots / Send screenshots to Pixel Eagle",
+          "failed_steps": [
+            "Send to Pixel Eagle"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28984005060,
+      "event": "merge_group",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-08T23:56:53Z",
+      "html_url": "https://github.com/bevyengine/bevy/actions/runs/28984005060",
+      "jobs": [
+        {
+          "job": "ci",
+          "failed_steps": [
+            "CI job"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "check-doc",
+          "failed_steps": [
+            "Build and check doc"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "build (macos-latest)",
+          "failed_steps": [
+            "Build & run tests"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

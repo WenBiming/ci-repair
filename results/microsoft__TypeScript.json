@@ -1,0 +1,645 @@
+{
+  "repo": "microsoft/TypeScript",
+  "license": "Apache-2.0",
+  "stars": 111307,
+  "languages": {
+    "Go": 0.861,
+    "TypeScript": 0.134,
+    "JavaScript": 0.004,
+    "Assembly": 0.001,
+    "Shell": 0.0
+  },
+  "significant_languages": [
+    "Go",
+    "TypeScript"
+  ],
+  "ci_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/set-version.yaml",
+    ".github/workflows/accept-baselines-fix-lints.yaml",
+    ".github/workflows/create-cherry-pick-pr.yml",
+    "dynamic/codespaces/create_codespaces_prebuilds",
+    "dynamic/copilot-swe-agent/copilot",
+    ".github/workflows/copilot-setup-steps.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    ".github/workflows/bump-vscode-typescript.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/new-release-branch.yaml",
+    ".github/workflows/sync-branch.yaml",
+    ".github/workflows/codeql.yml",
+    ".github/workflows/sync-wiki.yml",
+    ".github/workflows/scorecard.yml",
+    ".github/workflows/close-issues.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/dependabot/update-graph",
+    ".github/workflows/tag-vscode-typescript.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 2063,
+      "failed": 501,
+      "pr_runs": 1593,
+      "pr_failed": 456
+    },
+    {
+      "path": ".github/workflows/create-cherry-pick-pr.yml",
+      "runs": 1,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/codespaces/create_codespaces_prebuilds",
+      "runs": 3,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/copilot-swe-agent/copilot",
+      "runs": 91,
+      "failed": 4,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 623,
+      "failed": 24,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/bump-vscode-typescript.yml",
+      "runs": 3,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 2784,
+  "failed": 531,
+  "fail_rate": 0.191,
+  "pr_runs": 1593,
+  "pr_failed": 456,
+  "pr_fail_rate": 0.286,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 11,
+  "compile_share_of_failures": 0.364,
+  "est_compile_failures": 193,
+  "est_compile_fail_rate": 0.069,
+  "failed_step_categories": {
+    "other": 5,
+    "build": 7,
+    "test": 9,
+    "lint": 3,
+    "setup": 1
+  },
+  "compilers_seen": {
+    "tsc": 6,
+    "go": 1
+  },
+  "samples": [
+    {
+      "run_id": 35153669659,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-16T21:40:27Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/35153669659",
+      "jobs": [
+        {
+          "job": "tidy",
+          "failed_steps": [
+            "Run git diff --exit-code"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "required",
+          "failed_steps": [
+            "Check required jobs"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32335551939,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-20T05:25:40Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32335551939",
+      "jobs": [
+        {
+          "job": "test (race mode)",
+          "failed_steps": [
+            "API Tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "test (noembed)",
+          "failed_steps": [
+            "API Tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "test (concurrent test programs)",
+          "failed_steps": [
+            "API Tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 32516642313,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-21T19:05:08Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32516642313",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35981597426,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-24T09:29:59Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/35981597426",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32768624938,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-24T19:31:13Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32768624938",
+      "jobs": [
+        {
+          "job": "lint (noembed)",
+          "failed_steps": [
+            "Run npx hereby lint"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "required",
+          "failed_steps": [
+            "Check required jobs"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32900133375,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-25T21:16:40Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32900133375",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32984013318,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-26T15:05:00Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32984013318",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33204721115,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-28T19:37:58Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/33204721115",
+      "jobs": [
+        {
+          "job": "go-test",
+          "failed_steps": [
+            "Tests without Node.js"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "go"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "required",
+          "failed_steps": [
+            "Check required jobs"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 36016783868,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-24T14:59:06Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/36016783868",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32356609266,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-20T09:58:40Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32356609266",
+      "jobs": [
+        {
+          "job": "test (race mode)",
+          "failed_steps": [],
+          "step_category": "test",
+          "log_available": false
+        },
+        {
+          "job": "required",
+          "failed_steps": [
+            "Check required jobs"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35007157156,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-15T18:23:19Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/35007157156",
+      "jobs": [
+        {
+          "job": "lint (ubuntu-latest)",
+          "failed_steps": [
+            "Run npx hereby lint"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "generate",
+          "failed_steps": [
+            "Run git diff --staged --exit-code --stat"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "lint (windows-latest)",
+          "failed_steps": [
+            "Run npx hereby lint"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32756935900,
+      "event": "dynamic",
+      "workflow": "dynamic/agents/copilot-pull-request-reviewer",
+      "created_at": "2026-08-24T17:29:36Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32756935900",
+      "jobs": [
+        {
+          "job": "copilot-pull-request-reviewer",
+          "failed_steps": [
+            "Post Run ./.github/actions/setup-go"
+          ],
+          "step_category": "setup",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34284158244,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-08T22:06:19Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/34284158244",
+      "jobs": [
+        {
+          "job": "test (race mode)",
+          "failed_steps": [
+            "Tests",
+            "Print baseline diff on failure"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "required",
+          "failed_steps": [
+            "Check required jobs"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32389072614,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-20T15:56:02Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32389072614",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35385799060,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-18T19:24:56Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/35385799060",
+      "jobs": [
+        {
+          "job": "test extra (windows-latest)",
+          "failed_steps": [
+            "Run npx hereby test:api"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "test extra (ubuntu-latest)",
+          "failed_steps": [
+            "Run npx hereby test:api"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "required",
+          "failed_steps": [
+            "Check required jobs"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 33538766285,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-01T17:36:30Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/33538766285",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32466735323,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-21T09:12:01Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32466735323",
+      "jobs": [
+        {
+          "job": "test (race mode)",
+          "failed_steps": [],
+          "step_category": "test",
+          "log_available": false
+        },
+        {
+          "job": "required",
+          "failed_steps": [
+            "Check required jobs"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32489091693,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-21T13:52:07Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32489091693",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32368092806,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-20T12:17:36Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/32368092806",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33000097491,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-26T18:30:54Z",
+      "html_url": "https://github.com/microsoft/TypeScript/actions/runs/33000097491",
+      "jobs": [
+        {
+          "job": "test extra (windows-latest)",
+          "failed_steps": [
+            "Run git diff --staged --exit-code --stat"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "release-build",
+          "failed_steps": [
+            "Run npx hereby typescript:release --forRelease --setPrerelease dev.0.0"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test extra (ubuntu-latest)",
+          "failed_steps": [
+            "Run git diff --staged --exit-code --stat"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    }
+  ]
+}

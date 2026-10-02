@@ -1,0 +1,648 @@
+{
+  "repo": "neovim/neovim",
+  "license": "NOASSERTION",
+  "stars": 102699,
+  "languages": {
+    "Vim Script": 0.391,
+    "Lua": 0.332,
+    "C": 0.267,
+    "CMake": 0.004,
+    "Zig": 0.002,
+    "Shell": 0.001,
+    "JavaScript": 0.001,
+    "Tree-sitter Query": 0.001,
+    "HTML": 0.0,
+    "Makefile": 0.0,
+    "Roff": 0.0,
+    "Python": 0.0,
+    "C++": 0.0,
+    "Batchfile": 0.0,
+    "CSS": 0.0,
+    "Ruby": 0.0
+  },
+  "significant_languages": [
+    "Vim Script",
+    "Lua",
+    "C"
+  ],
+  "ci_workflows": [
+    ".github/workflows/news.yml",
+    ".github/workflows/lintcommit.yml",
+    ".github/workflows/coverity.yml",
+    ".github/workflows/build.yml",
+    ".github/workflows/test.yml",
+    ".github/workflows/response.yml",
+    ".github/workflows/optional.yml",
+    ".github/workflows/reviewers_remove.yml",
+    ".github/workflows/docs.yml",
+    ".github/workflows/reviewers_add.yml",
+    ".github/workflows/vim_patches.yml",
+    ".github/workflows/test_windows.yml",
+    ".github/workflows/build_dummy.yml",
+    ".github/workflows/lintcommit_dummy.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    ".github/workflows/lintdocurls.yml",
+    ".github/workflows/zizmor.yml",
+    "dynamic/copilot-swe-agent/copilot",
+    ".github/workflows/test_wasm.yml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    ".github/workflows/wasm.yml",
+    ".github/workflows/bsd.yml",
+    ".github/workflows/test_bsd.yml",
+    ".github/workflows/build_wasm.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/release.yml",
+    ".github/workflows/backport.yml",
+    ".github/workflows/codeql.yml",
+    ".github/workflows/labeler_issue.yml",
+    ".github/workflows/labeler_pr.yml",
+    "dynamic/dependabot/dependabot-updates"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/news.yml",
+      "runs": 4169,
+      "failed": 190,
+      "pr_runs": 4169,
+      "pr_failed": 190
+    },
+    {
+      "path": ".github/workflows/lintcommit.yml",
+      "runs": 3690,
+      "failed": 220,
+      "pr_runs": 3690,
+      "pr_failed": 220
+    },
+    {
+      "path": ".github/workflows/coverity.yml",
+      "runs": 90,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "runs": 285,
+      "failed": 9,
+      "pr_runs": 285,
+      "pr_failed": 9
+    },
+    {
+      "path": ".github/workflows/test.yml",
+      "runs": 4343,
+      "failed": 1365,
+      "pr_runs": 3450,
+      "pr_failed": 1061
+    },
+    {
+      "path": ".github/workflows/response.yml",
+      "runs": 4701,
+      "failed": 15,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/optional.yml",
+      "runs": 3897,
+      "failed": 54,
+      "pr_runs": 3597,
+      "pr_failed": 54
+    },
+    {
+      "path": ".github/workflows/reviewers_remove.yml",
+      "runs": 1216,
+      "failed": 2,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/docs.yml",
+      "runs": 3493,
+      "failed": 197,
+      "pr_runs": 3786,
+      "pr_failed": 197
+    },
+    {
+      "path": ".github/workflows/reviewers_add.yml",
+      "runs": 808,
+      "failed": 2,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/vim_patches.yml",
+      "runs": 112,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/build_dummy.yml",
+      "runs": 3343,
+      "failed": 53,
+      "pr_runs": 3343,
+      "pr_failed": 53
+    },
+    {
+      "path": ".github/workflows/lintcommit_dummy.yml",
+      "runs": 94,
+      "failed": 0,
+      "pr_runs": 94,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/lintdocurls.yml",
+      "runs": 12,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/zizmor.yml",
+      "runs": 4319,
+      "failed": 61,
+      "pr_runs": 3453,
+      "pr_failed": 59
+    },
+    {
+      "path": "dynamic/copilot-swe-agent/copilot",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/test_wasm.yml",
+      "runs": 4226,
+      "failed": 92,
+      "pr_runs": 3360,
+      "pr_failed": 91
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 4,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/wasm.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 1,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/bsd.yml",
+      "runs": 2,
+      "failed": 0,
+      "pr_runs": 2,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/test_bsd.yml",
+      "runs": 2682,
+      "failed": 72,
+      "pr_runs": 2107,
+      "pr_failed": 70
+    },
+    {
+      "path": ".github/workflows/build_wasm.yml",
+      "runs": 65,
+      "failed": 10,
+      "pr_runs": 65,
+      "pr_failed": 10
+    }
+  ],
+  "runs": 41553,
+  "failed": 2342,
+  "fail_rate": 0.056,
+  "pr_runs": 31402,
+  "pr_failed": 2014,
+  "pr_fail_rate": 0.064,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 13,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "lint": 4,
+    "test": 5,
+    "build": 2,
+    "other": 3,
+    "setup": 1
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 30157898590,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test_wasm.yml",
+      "created_at": "2026-07-25T12:23:26Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/30157898590",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29913954841,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lintcommit.yml",
+      "created_at": "2026-07-22T10:58:36Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/29913954841",
+      "jobs": [
+        {
+          "job": "lint-commits",
+          "failed_steps": [
+            "lintcommit"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30876816515,
+      "event": "pull_request",
+      "workflow": ".github/workflows/news.yml",
+      "created_at": "2026-08-04T04:09:18Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/30876816515",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29407170324,
+      "event": "push",
+      "workflow": ".github/workflows/test.yml",
+      "created_at": "2026-07-15T10:10:13Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/29407170324",
+      "jobs": [
+        {
+          "job": "macos intel clang functionaltest",
+          "failed_steps": [
+            "functionaltest"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28748802588,
+      "event": "push",
+      "workflow": ".github/workflows/test.yml",
+      "created_at": "2026-07-05T17:22:19Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/28748802588",
+      "jobs": [
+        {
+          "job": "ubuntu tsan clang functionaltest",
+          "failed_steps": [
+            "functionaltest"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28981032381,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test.yml",
+      "created_at": "2026-07-08T22:47:07Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/28981032381",
+      "jobs": [
+        {
+          "job": "build using zig build (macos 15)",
+          "failed_steps": [
+            "Run zig build $OPTS functionaltest"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "build using zig build (linux)",
+          "failed_steps": [
+            "Run zig build $OPTS functionaltest"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "ubuntu release gcc functionaltest",
+          "failed_steps": [
+            "functionaltest"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31390391601,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lintcommit.yml",
+      "created_at": "2026-08-10T12:56:32Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/31390391601",
+      "jobs": [
+        {
+          "job": "lint-commits",
+          "failed_steps": [
+            "lintcommit"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29506119745,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lintcommit.yml",
+      "created_at": "2026-07-16T14:20:11Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/29506119745",
+      "jobs": [
+        {
+          "job": "lint-commits",
+          "failed_steps": [
+            "lintcommit"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30784166388,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test_bsd.yml",
+      "created_at": "2026-08-03T04:20:46Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/30784166388",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33612631721,
+      "event": "pull_request",
+      "workflow": ".github/workflows/docs.yml",
+      "created_at": "2026-09-02T09:10:09Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/33612631721",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35715684160,
+      "event": "pull_request",
+      "workflow": ".github/workflows/news.yml",
+      "created_at": "2026-09-22T10:23:13Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/35715684160",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32615375630,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build_dummy.yml",
+      "created_at": "2026-08-23T03:27:00Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/32615375630",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 31027039062,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test.yml",
+      "created_at": "2026-08-05T16:48:43Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/31027039062",
+      "jobs": [
+        {
+          "job": "macos intel clang functionaltest",
+          "failed_steps": [
+            "functionaltest"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30714139164,
+      "event": "pull_request",
+      "workflow": ".github/workflows/news.yml",
+      "created_at": "2026-08-01T19:08:59Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/30714139164",
+      "jobs": [
+        {
+          "job": "check",
+          "failed_steps": [
+            "news.txt needs to be updated"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30715882195,
+      "event": "pull_request",
+      "workflow": ".github/workflows/news.yml",
+      "created_at": "2026-08-01T19:56:43Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/30715882195",
+      "jobs": [
+        {
+          "job": "check",
+          "failed_steps": [
+            "news.txt needs to be updated"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29104176924,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lintcommit.yml",
+      "created_at": "2026-07-10T15:34:27Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/29104176924",
+      "jobs": [
+        {
+          "job": "lint-commits",
+          "failed_steps": [
+            "lintcommit"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29046776099,
+      "event": "push",
+      "workflow": ".github/workflows/test.yml",
+      "created_at": "2026-07-09T20:07:22Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/29046776099",
+      "jobs": [
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Run ./.github/actions/setup"
+          ],
+          "step_category": "setup",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28881817916,
+      "event": "push",
+      "workflow": ".github/workflows/test.yml",
+      "created_at": "2026-07-07T16:24:04Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/28881817916",
+      "jobs": [
+        {
+          "job": "windows / windows (functional)",
+          "failed_steps": [
+            "functionaltest"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31162697468,
+      "event": "pull_request",
+      "workflow": ".github/workflows/docs.yml",
+      "created_at": "2026-08-07T08:40:41Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/31162697468",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29709280613,
+      "event": "push",
+      "workflow": ".github/workflows/zizmor.yml",
+      "created_at": "2026-07-20T00:16:59Z",
+      "html_url": "https://github.com/neovim/neovim/actions/runs/29709280613",
+      "jobs": [
+        {
+          "job": "Run zizmor",
+          "failed_steps": [
+            "Run zizmor"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

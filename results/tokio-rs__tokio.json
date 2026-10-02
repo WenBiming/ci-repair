@@ -1,0 +1,642 @@
+{
+  "repo": "tokio-rs/tokio",
+  "license": "MIT",
+  "stars": 33302,
+  "languages": {
+    "Rust": 1.0
+  },
+  "significant_languages": [
+    "Rust"
+  ],
+  "ci_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/loom.yml",
+    ".github/workflows/stress-test.yml",
+    ".github/workflows/uring-kernel-version-test.yml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/copilot-swe-agent/copilot"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/audit.yml",
+    ".github/workflows/bench.yml",
+    ".github/workflows/ci-benchmark.yml",
+    ".github/workflows/labeler.yml",
+    ".github/workflows/pr-audit.yml",
+    "dynamic/dependabot/dependabot-updates"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 912,
+      "failed": 171,
+      "pr_runs": 750,
+      "pr_failed": 168
+    },
+    {
+      "path": ".github/workflows/loom.yml",
+      "runs": 1526,
+      "failed": 12,
+      "pr_runs": 1364,
+      "pr_failed": 11
+    },
+    {
+      "path": ".github/workflows/stress-test.yml",
+      "runs": 901,
+      "failed": 4,
+      "pr_runs": 750,
+      "pr_failed": 4
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/copilot-swe-agent/copilot",
+      "runs": 12,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 3352,
+  "failed": 187,
+  "fail_rate": 0.056,
+  "pr_runs": 2864,
+  "pr_failed": 183,
+  "pr_fail_rate": 0.064,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 20,
+  "compile_share_of_failures": 0.05,
+  "est_compile_failures": 9,
+  "est_compile_fail_rate": 0.003,
+  "failed_step_categories": {
+    "lint": 5,
+    "other": 6,
+    "build": 4,
+    "test": 9,
+    "setup": 2
+  },
+  "compilers_seen": {
+    "rustc": 1
+  },
+  "samples": [
+    {
+      "run_id": 36455441464,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-28T17:03:31Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/36455441464",
+      "jobs": [
+        {
+          "job": "fmt",
+          "failed_steps": [
+            "rustfmt --check"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29548585831,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T01:53:40Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/29548585831",
+      "jobs": [
+        {
+          "job": "fmt",
+          "failed_steps": [
+            "rustfmt --check"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29089917400,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-10T11:35:42Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/29089917400",
+      "jobs": [
+        {
+          "job": "docs (windows-latest, tracing)",
+          "failed_steps": [
+            "doc --lib --all-features"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 33096835322,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-27T17:08:08Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/33096835322",
+      "jobs": [
+        {
+          "job": "Test io_uring on Linux 7.2.1 / build",
+          "failed_steps": [
+            "Download & build Linux kernel"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30721778255,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-01T22:40:29Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/30721778255",
+      "jobs": [
+        {
+          "job": "FreeBSD x86_64",
+          "failed_steps": [
+            "Test in FreeBSD"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30915846264,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-04T13:50:44Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/30915846264",
+      "jobs": [
+        {
+          "job": "FreeBSD x86_64",
+          "failed_steps": [
+            "Test in FreeBSD"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29434171859,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T16:51:57Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/29434171859",
+      "jobs": [
+        {
+          "job": "FreeBSD x86_64",
+          "failed_steps": [],
+          "step_category": "other",
+          "log_available": false
+        },
+        {
+          "job": "cross-test-with-parking_lot (armv7-unknown-linux-gnueabihf, ubuntu-24.04-arm)",
+          "failed_steps": [
+            "Run taiki-e/setup-cross-toolchain-action@v1"
+          ],
+          "step_category": "setup",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cross-test-without-parking_lot (armv7-unknown-linux-gnueabihf, ubuntu-24.04-arm)",
+          "failed_steps": [
+            "Run taiki-e/setup-cross-toolchain-action@v1"
+          ],
+          "step_category": "setup",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29609547692,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T19:59:17Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/29609547692",
+      "jobs": [
+        {
+          "job": "test all crates in the workspace with all features and panic=abort (ubuntu-latest)",
+          "failed_steps": [
+            "test --features full,test-util panic=abort"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28814236838,
+      "event": "pull_request",
+      "workflow": ".github/workflows/loom.yml",
+      "created_at": "2026-07-06T18:31:06Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/28814236838",
+      "jobs": [
+        {
+          "job": "loom tokio::sync",
+          "failed_steps": [
+            "run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36171351807,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-25T18:06:49Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/36171351807",
+      "jobs": [
+        {
+          "job": "test tokio for wasm32-unknown-emscripten",
+          "failed_steps": [
+            "Check tokio feature matrix for emscripten"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28806458055,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-06T16:21:41Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/28806458055",
+      "jobs": [
+        {
+          "job": "fmt",
+          "failed_steps": [
+            "rustfmt --check"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36032500969,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-24T17:10:56Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/36032500969",
+      "jobs": [
+        {
+          "job": "fmt",
+          "failed_steps": [
+            "rustfmt --check"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33961928415,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-05T10:55:18Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/33961928415",
+      "jobs": [
+        {
+          "job": "test all crates in the workspace with all features and panic=abort (ubuntu-latest)",
+          "failed_steps": [
+            "test --features full,test-util panic=abort"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "asan",
+          "failed_steps": [
+            "asan"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29089069598,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-10T11:19:27Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/29089069598",
+      "jobs": [
+        {
+          "job": "docs (ubuntu-latest, tracing,io-uring,taskdump)",
+          "failed_steps": [
+            "doc --lib --all-features"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29089356134,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-10T11:24:58Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/29089356134",
+      "jobs": [
+        {
+          "job": "docs (ubuntu-latest, tracing,io-uring,taskdump)",
+          "failed_steps": [
+            "doc --lib --all-features"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28806338286,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-06T16:19:45Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/28806338286",
+      "jobs": [
+        {
+          "job": "Run integration tests for each feature (ubuntu-latest)",
+          "failed_steps": [
+            "test tests-integration --each-feature"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Check tokio --feature-powerset --depth 2 on i686-unknown-linux-gnu without AtomicU64",
+          "failed_steps": [
+            "Check"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "cross-check-tier3 (x86_64-unknown-haiku, taskdump)",
+          "failed_steps": [
+            "Run cargo hack check -Zbuild-std --workspace --each-feature --target x86_64-unknown-haiku --exclude-features \"taskdump\""
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31007409189,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-05T12:50:28Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/31007409189",
+      "jobs": [
+        {
+          "job": "fmt",
+          "failed_steps": [
+            "rustfmt --check"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30911857216,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-04T13:02:20Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/30911857216",
+      "jobs": [
+        {
+          "job": "miri-lib",
+          "failed_steps": [
+            "miri"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test tokio for wasm32-unknown-unknown (macros sync rt)",
+          "failed_steps": [
+            "test tokio (macros sync rt)"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34787134631,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-13T22:33:03Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/34787134631",
+      "jobs": [
+        {
+          "job": "Test hyper (ubuntu-latest)",
+          "failed_steps": [
+            "Test hyper"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35825934355,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-23T06:15:37Z",
+      "html_url": "https://github.com/tokio-rs/tokio/actions/runs/35825934355",
+      "jobs": [
+        {
+          "job": "test tokio for wasm32-unknown-emscripten",
+          "failed_steps": [
+            "Test tokio for emscripten (JSPI)"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

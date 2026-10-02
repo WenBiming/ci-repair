@@ -1,0 +1,864 @@
+{
+  "repo": "tauri-apps/tauri",
+  "license": "Apache-2.0",
+  "stars": 111547,
+  "languages": {
+    "Rust": 0.816,
+    "TypeScript": 0.093,
+    "NSIS": 0.03,
+    "Kotlin": 0.018,
+    "JavaScript": 0.017,
+    "Shell": 0.016,
+    "Swift": 0.006,
+    "Dockerfile": 0.001,
+    "HTML": 0.001,
+    "PowerShell": 0.0,
+    "AppleScript": 0.0,
+    "Svelte": 0.0,
+    "CSS": 0.0,
+    "Standard ML": 0.0,
+    "Ruby": 0.0,
+    "Objective-C": 0.0,
+    "Objective-C++": 0.0,
+    "C++": 0.0
+  },
+  "significant_languages": [
+    "Rust"
+  ],
+  "ci_workflows": [
+    ".github/workflows/test-core.yml",
+    ".github/workflows/udeps.yml",
+    ".github/workflows/lint-js.yml",
+    ".github/workflows/test-cli-js.yml",
+    ".github/workflows/test-cli-rs.yml",
+    ".github/workflows/docker.yml",
+    ".github/workflows/check-generated-files.yml",
+    ".github/workflows/test-android.yml",
+    ".github/workflows/check-license-header.yml",
+    ".github/workflows/test-lint-bundler.yml",
+    ".github/workflows/lint-core.yml",
+    ".github/workflows/test-updater-artifacts.yml",
+    ".github/workflows/covector-status.yml",
+    ".github/workflows/lint-cli.yml",
+    ".github/workflows/check-change-tags.yml",
+    ".github/workflows/supply-chain.yml",
+    ".github/workflows/fmt.yml",
+    ".github/workflows/lint-rust.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    ".github/workflows/test-utils.yml",
+    ".github/workflows/test-api-e2e.yml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    ".github/workflows/test-api-e2e-mobile.yml",
+    ".github/workflows/test-cef-e2e.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/audit.yml",
+    ".github/workflows/covector-version-or-publish.yml",
+    ".github/workflows/bench.yml",
+    ".github/workflows/publish-cli-js.yml",
+    ".github/workflows/publish-cli-rs.yml",
+    ".github/workflows/publish-hotfix.yml",
+    ".github/workflows/covector-version-or-publish-v1.yml",
+    ".github/workflows/covector-comment-on-fork.yml",
+    ".github/workflows/deploy-schema-worker.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/github-code-scanning/codeql",
+    ".github/workflows/covector-version-or-publish-v3.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/test-core.yml",
+      "runs": 1936,
+      "failed": 303,
+      "pr_runs": 1707,
+      "pr_failed": 303
+    },
+    {
+      "path": ".github/workflows/udeps.yml",
+      "runs": 229,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/lint-js.yml",
+      "runs": 396,
+      "failed": 56,
+      "pr_runs": 396,
+      "pr_failed": 56
+    },
+    {
+      "path": ".github/workflows/test-cli-js.yml",
+      "runs": 539,
+      "failed": 61,
+      "pr_runs": 310,
+      "pr_failed": 61
+    },
+    {
+      "path": ".github/workflows/test-cli-rs.yml",
+      "runs": 1787,
+      "failed": 148,
+      "pr_runs": 1558,
+      "pr_failed": 148
+    },
+    {
+      "path": ".github/workflows/check-generated-files.yml",
+      "runs": 478,
+      "failed": 68,
+      "pr_runs": 478,
+      "pr_failed": 68
+    },
+    {
+      "path": ".github/workflows/test-android.yml",
+      "runs": 138,
+      "failed": 44,
+      "pr_runs": 138,
+      "pr_failed": 44
+    },
+    {
+      "path": ".github/workflows/check-license-header.yml",
+      "runs": 1989,
+      "failed": 136,
+      "pr_runs": 1989,
+      "pr_failed": 136
+    },
+    {
+      "path": ".github/workflows/covector-status.yml",
+      "runs": 1989,
+      "failed": 122,
+      "pr_runs": 1989,
+      "pr_failed": 122
+    },
+    {
+      "path": ".github/workflows/check-change-tags.yml",
+      "runs": 673,
+      "failed": 111,
+      "pr_runs": 673,
+      "pr_failed": 111
+    },
+    {
+      "path": ".github/workflows/supply-chain.yml",
+      "runs": 139,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/fmt.yml",
+      "runs": 1990,
+      "failed": 165,
+      "pr_runs": 1990,
+      "pr_failed": 165
+    },
+    {
+      "path": ".github/workflows/lint-rust.yml",
+      "runs": 2096,
+      "failed": 371,
+      "pr_runs": 1867,
+      "pr_failed": 370
+    },
+    {
+      "path": ".github/workflows/test-api-e2e.yml",
+      "runs": 286,
+      "failed": 32,
+      "pr_runs": 180,
+      "pr_failed": 26
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 2,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/test-api-e2e-mobile.yml",
+      "runs": 161,
+      "failed": 7,
+      "pr_runs": 93,
+      "pr_failed": 6
+    },
+    {
+      "path": ".github/workflows/test-cef-e2e.yml",
+      "runs": 27,
+      "failed": 14,
+      "pr_runs": 27,
+      "pr_failed": 14
+    }
+  ],
+  "runs": 14855,
+  "failed": 1639,
+  "fail_rate": 0.11,
+  "pr_runs": 13395,
+  "pr_failed": 1630,
+  "pr_fail_rate": 0.122,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 13,
+  "compile_share_of_failures": 0.769,
+  "est_compile_failures": 1261,
+  "est_compile_fail_rate": 0.085,
+  "failed_step_categories": {
+    "lint": 13,
+    "test": 18
+  },
+  "compilers_seen": {
+    "rustc": 19
+  },
+  "samples": [
+    {
+      "run_id": 30272881723,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint-rust.yml",
+      "created_at": "2026-07-27T13:59:22Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/30272881723",
+      "jobs": [
+        {
+          "job": "clippy (x86_64-pc-windows-msvc, windows-latest, cargo)",
+          "failed_steps": [
+            "Run cargo clippy --target x86_64-pc-windows-msvc --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 34193872953,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-core.yml",
+      "created_at": "2026-09-08T06:15:22Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/34193872953",
+      "jobs": [
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.95, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (x86_64-unknown-linux-gnu, ubuntu-latest, 1.95, cargo, test, --no-default-features, no-default)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (x86_64-unknown-linux-gnu, ubuntu-latest, 1.95, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 30407063226,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-core.yml",
+      "created_at": "2026-07-28T23:09:17Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/30407063226",
+      "jobs": [
+        {
+          "job": "test (x86_64-unknown-linux-gnu, ubuntu-latest, 1.90, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.90, cargo, test, --no-default-features, no-default)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.90, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35297380708,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint-rust.yml",
+      "created_at": "2026-09-18T01:57:04Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/35297380708",
+      "jobs": [
+        {
+          "job": "clippy (aarch64-apple-ios, macos-latest, cargo, --package api )",
+          "failed_steps": [
+            "Run cargo clippy --target aarch64-apple-ios --package api --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "clippy (x86_64-pc-windows-msvc, windows-latest, cargo)",
+          "failed_steps": [
+            "Run cargo clippy --target x86_64-pc-windows-msvc --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "clippy (aarch64-linux-android, ubuntu-latest, cross, --package api )",
+          "failed_steps": [
+            "Run cross clippy --target aarch64-linux-android --package api --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 36269071591,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-cli-rs.yml",
+      "created_at": "2026-09-26T20:18:41Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/36269071591",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34954464627,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-cli-rs.yml",
+      "created_at": "2026-09-15T09:47:34Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/34954464627",
+      "jobs": [
+        {
+          "job": "test (x86_64-apple-darwin, macos-latest)",
+          "failed_steps": [
+            "test CLI"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (x86_64-unknown-linux-gnu, ubuntu-latest)",
+          "failed_steps": [
+            "test CLI"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 31995779185,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-cli-rs.yml",
+      "created_at": "2026-08-17T04:49:25Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/31995779185",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35455662291,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-core.yml",
+      "created_at": "2026-09-19T16:39:35Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/35455662291",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34032290663,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint-rust.yml",
+      "created_at": "2026-09-06T12:09:49Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/34032290663",
+      "jobs": [
+        {
+          "job": "clippy (aarch64-apple-ios, macos-latest, cargo, --package api )",
+          "failed_steps": [
+            "Run cargo clippy --target aarch64-apple-ios --package api --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "clippy (aarch64-apple-darwin, macos-latest, cargo)",
+          "failed_steps": [
+            "Run cargo clippy --target aarch64-apple-darwin --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "clippy (x86_64-pc-windows-msvc, windows-latest, cargo)",
+          "failed_steps": [
+            "Run cargo clippy --target x86_64-pc-windows-msvc --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 33371911094,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-core.yml",
+      "created_at": "2026-08-31T08:13:47Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/33371911094",
+      "jobs": [
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.90, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 32503562278,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint-rust.yml",
+      "created_at": "2026-08-21T16:33:51Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/32503562278",
+      "jobs": [
+        {
+          "job": "clippy (aarch64-apple-ios, macos-latest, cargo, --package api )",
+          "failed_steps": [
+            "Run cargo clippy --target aarch64-apple-ios --package api --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "clippy (aarch64-apple-darwin, macos-latest, cargo)",
+          "failed_steps": [
+            "Run cargo clippy --target aarch64-apple-darwin --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "clippy (x86_64-pc-windows-msvc, windows-latest, cargo)",
+          "failed_steps": [
+            "Run cargo clippy --target x86_64-pc-windows-msvc --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33969913686,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint-rust.yml",
+      "created_at": "2026-09-05T13:47:26Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/33969913686",
+      "jobs": [
+        {
+          "job": "clippy (aarch64-linux-android, ubuntu-latest, cross, --package api , --features prod)",
+          "failed_steps": [
+            "Run cross clippy --target aarch64-linux-android --package api --all-targets --features prod -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "clippy (x86_64-unknown-linux-gnu, ubuntu-latest, cargo, --all-features)",
+          "failed_steps": [
+            "Run cargo clippy --target x86_64-unknown-linux-gnu --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "clippy (aarch64-apple-darwin, macos-latest, cargo, --all-features)",
+          "failed_steps": [
+            "Run cargo clippy --target aarch64-apple-darwin --all-targets --all-features -- -D warnings"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 32320499459,
+      "event": "pull_request",
+      "workflow": ".github/workflows/fmt.yml",
+      "created_at": "2026-08-20T01:17:52Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/32320499459",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33866886502,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-core.yml",
+      "created_at": "2026-09-04T11:13:04Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/33866886502",
+      "jobs": [
+        {
+          "job": "test (x86_64-unknown-linux-gnu, ubuntu-latest, 1.95, cargo, test, --no-default-features, no-default)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (aarch64-apple-darwin, macos-14, 1.95, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.95, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 36432904081,
+      "event": "pull_request",
+      "workflow": ".github/workflows/fmt.yml",
+      "created_at": "2026-09-28T14:01:56Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/36432904081",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32320499574,
+      "event": "pull_request",
+      "workflow": ".github/workflows/covector-status.yml",
+      "created_at": "2026-08-20T01:17:52Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/32320499574",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30244638611,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-core.yml",
+      "created_at": "2026-07-27T07:01:23Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/30244638611",
+      "jobs": [
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.90, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.90, cargo, test, --no-default-features, no-default)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 30298877313,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-core.yml",
+      "created_at": "2026-07-27T19:35:08Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/30298877313",
+      "jobs": [
+        {
+          "job": "test (aarch64-apple-darwin, macos-14, 1.90, cargo, test, --no-default-features, no-default)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.90, cargo, test, --no-default-features, no-default)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test (aarch64-apple-darwin, macos-14, 1.90, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri-utils"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33610491504,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-core.yml",
+      "created_at": "2026-09-02T08:46:16Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/33610491504",
+      "jobs": [
+        {
+          "job": "test (x86_64-pc-windows-msvc, windows-latest, 1.90, cargo, test, --all-features, all)",
+          "failed_steps": [
+            "test tauri"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 31301157185,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-cli-rs.yml",
+      "created_at": "2026-08-09T07:26:41Z",
+      "html_url": "https://github.com/tauri-apps/tauri/actions/runs/31301157185",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    }
+  ]
+}

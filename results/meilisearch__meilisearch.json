@@ -1,0 +1,842 @@
+{
+  "repo": "meilisearch/meilisearch",
+  "license": "NOASSERTION",
+  "stars": 59467,
+  "languages": {
+    "Rust": 0.999,
+    "Shell": 0.0,
+    "Dockerfile": 0.0
+  },
+  "significant_languages": [
+    "Rust"
+  ],
+  "ci_workflows": [
+    ".github/workflows/update-cargo-toml-version.yml",
+    ".github/workflows/latest-git-tag.yml",
+    ".github/workflows/test-suite.yml",
+    ".github/workflows/dependency-issue.yml",
+    ".github/workflows/flaky-tests.yml",
+    ".github/workflows/sdks-tests.yml",
+    ".github/workflows/fuzzer-indexing.yml",
+    ".github/workflows/check-openapi-file.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/publish-docker-images.yml",
+    ".github/workflows/publish-apt-brew-pkg.yml",
+    ".github/workflows/bench-push-indexing.yml",
+    ".github/workflows/bench-manual.yml",
+    ".github/workflows/bench-pr.yml",
+    "dynamic/dependabot/dependabot-updates",
+    ".github/workflows/check-valid-milestone.yml",
+    ".github/workflows/db-change-missing.yml",
+    ".github/workflows/db-change-comments.yml",
+    "dynamic/github-code-scanning/codeql",
+    ".github/workflows/publish-release-assets.yml",
+    ".github/workflows/benchmarks-missing.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/update-cargo-toml-version.yml",
+      "runs": 7,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/latest-git-tag.yml",
+      "runs": 16,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/test-suite.yml",
+      "runs": 530,
+      "failed": 272,
+      "pr_runs": 371,
+      "pr_failed": 231
+    },
+    {
+      "path": ".github/workflows/flaky-tests.yml",
+      "runs": 90,
+      "failed": 24,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/sdks-tests.yml",
+      "runs": 90,
+      "failed": 90,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/fuzzer-indexing.yml",
+      "runs": 69,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/check-openapi-file.yml",
+      "runs": 461,
+      "failed": 78,
+      "pr_runs": 371,
+      "pr_failed": 78
+    }
+  ],
+  "runs": 1263,
+  "failed": 466,
+  "fail_rate": 0.369,
+  "pr_runs": 742,
+  "pr_failed": 309,
+  "pr_fail_rate": 0.416,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 19,
+  "compile_share_of_failures": 0.263,
+  "est_compile_failures": 123,
+  "est_compile_fail_rate": 0.097,
+  "failed_step_categories": {
+    "test": 31,
+    "build": 5,
+    "other": 1,
+    "lint": 1
+  },
+  "compilers_seen": {
+    "rustc": 9
+  },
+  "samples": [
+    {
+      "run_id": 31079296969,
+      "event": "schedule",
+      "workflow": ".github/workflows/sdks-tests.yml",
+      "created_at": "2026-08-06T07:00:49Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31079296969",
+      "jobs": [
+        {
+          "job": ".NET SDK tests",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "meilisearch-symfony tests",
+          "failed_steps": [
+            "Run test suite"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29403183328,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-15T09:05:23Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/29403183328",
+      "jobs": [
+        {
+          "job": "Test legacy settings indexer",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Build in release",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo build without any default features"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29007286784,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-09T09:10:57Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/29007286784",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Test legacy settings indexer",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35569223275,
+      "event": "schedule",
+      "workflow": ".github/workflows/sdks-tests.yml",
+      "created_at": "2026-09-21T06:36:34Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/35569223275",
+      "jobs": [
+        {
+          "job": "Go SDK tests",
+          "failed_steps": [
+            "Run integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "JS SDK tests",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Python SDK tests",
+          "failed_steps": [
+            "Test with pytest"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31022242405,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-08-05T15:49:35Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31022242405",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Tests on ubuntu-22.04",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30437957456,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-29T09:02:24Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/30437957456",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Test legacy settings indexer",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30524619211,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-30T07:55:39Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/30524619211",
+      "jobs": [
+        {
+          "job": "Test with Ollama",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo build without any default features"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Test legacy settings indexer",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29227939735,
+      "event": "schedule",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-13T06:05:03Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/29227939735",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Tests almost all features",
+          "failed_steps": [
+            "Run cargo test with almost all features"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 35826908166,
+      "event": "schedule",
+      "workflow": ".github/workflows/sdks-tests.yml",
+      "created_at": "2026-09-23T06:28:26Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/35826908166",
+      "jobs": [
+        {
+          "job": ".NET SDK tests",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "PHP SDK tests",
+          "failed_steps": [
+            "Run test suite - default HTTP client (Guzzle 7)"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Python SDK tests",
+          "failed_steps": [
+            "Test with pytest"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29415132482,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-15T12:25:06Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/29415132482",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31868773237,
+      "event": "schedule",
+      "workflow": ".github/workflows/sdks-tests.yml",
+      "created_at": "2026-08-15T06:10:21Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/31868773237",
+      "jobs": [
+        {
+          "job": ".NET SDK tests",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35096320191,
+      "event": "pull_request",
+      "workflow": ".github/workflows/check-openapi-file.yml",
+      "created_at": "2026-09-16T12:31:23Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/35096320191",
+      "jobs": [
+        {
+          "job": "Check OpenAPI specification",
+          "failed_steps": [
+            "Generate OpenAPI file"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 35180954336,
+      "event": "schedule",
+      "workflow": ".github/workflows/flaky-tests.yml",
+      "created_at": "2026-09-17T04:11:09Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/35180954336",
+      "jobs": [
+        {
+          "job": "flaky",
+          "failed_steps": [
+            "Install cargo-flaky"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29495489204,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-16T11:43:53Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/29495489204",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28775890872,
+      "event": "schedule",
+      "workflow": ".github/workflows/sdks-tests.yml",
+      "created_at": "2026-07-06T07:43:44Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/28775890872",
+      "jobs": [
+        {
+          "job": "meilisearch-js-plugins tests",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Rust SDK tests",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34439947712,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-09-10T05:09:30Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/34439947712",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 28951189176,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-08T14:39:07Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/28951189176",
+      "jobs": [
+        {
+          "job": "Run Clippy (--features enterprise)",
+          "failed_steps": [
+            "Run cargo clippy"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Test with Ollama",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Build in release",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 28998504137,
+      "event": "schedule",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-09T06:22:29Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/28998504137",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Tests almost all features",
+          "failed_steps": [
+            "Run cargo test with almost all features"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29488840704,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-16T09:53:49Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/29488840704",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30539098925,
+      "event": "pull_request",
+      "workflow": ".github/workflows/test-suite.yml",
+      "created_at": "2026-07-30T11:34:45Z",
+      "html_url": "https://github.com/meilisearch/meilisearch/actions/runs/30539098925",
+      "jobs": [
+        {
+          "job": "Tests on windows-2022",
+          "failed_steps": [
+            "Run cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

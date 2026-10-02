@@ -1,0 +1,594 @@
+{
+  "repo": "redis/redis",
+  "license": "NOASSERTION",
+  "stars": 76570,
+  "languages": {
+    "C": 0.678,
+    "Tcl": 0.291,
+    "Python": 0.018,
+    "Shell": 0.008,
+    "Makefile": 0.003,
+    "Ruby": 0.002,
+    "C++": 0.0,
+    "Smarty": 0.0,
+    "JavaScript": 0.0
+  },
+  "significant_languages": [
+    "C",
+    "Tcl"
+  ],
+  "ci_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/codecov.yml",
+    ".github/workflows/command-compatibility-checks.yml",
+    ".github/workflows/coverity.yml",
+    ".github/workflows/daily.yml",
+    ".github/workflows/external.yml",
+    ".github/workflows/modules-build-flow.yml",
+    ".github/workflows/reply-schemas-linter.yml",
+    ".github/workflows/spell-check.yml",
+    ".github/workflows/test-pr-15816.yml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/copilot-swe-agent/copilot"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/bitmap-container-count-benchmark.yml",
+    ".github/workflows/codeql-analysis.yml",
+    ".github/workflows/post-release-automation.yml",
+    ".github/workflows/redis-cli-bitmap-bigkeys-benchmark.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/dependabot/update-graph"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 1450,
+      "failed": 202,
+      "pr_runs": 1333,
+      "pr_failed": 186
+    },
+    {
+      "path": ".github/workflows/codecov.yml",
+      "runs": 1522,
+      "failed": 217,
+      "pr_runs": 1295,
+      "pr_failed": 186
+    },
+    {
+      "path": ".github/workflows/command-compatibility-checks.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 1,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/coverity.yml",
+      "runs": 90,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/daily.yml",
+      "runs": 208,
+      "failed": 150,
+      "pr_runs": 114,
+      "pr_failed": 80
+    },
+    {
+      "path": ".github/workflows/external.yml",
+      "runs": 1643,
+      "failed": 147,
+      "pr_runs": 1317,
+      "pr_failed": 138
+    },
+    {
+      "path": ".github/workflows/modules-build-flow.yml",
+      "runs": 46,
+      "failed": 18,
+      "pr_runs": 42,
+      "pr_failed": 14
+    },
+    {
+      "path": ".github/workflows/reply-schemas-linter.yml",
+      "runs": 253,
+      "failed": 1,
+      "pr_runs": 213,
+      "pr_failed": 1
+    },
+    {
+      "path": ".github/workflows/spell-check.yml",
+      "runs": 1553,
+      "failed": 96,
+      "pr_runs": 1317,
+      "pr_failed": 96
+    },
+    {
+      "path": ".github/workflows/test-pr-15816.yml",
+      "runs": 1,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 4,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/copilot-swe-agent/copilot",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 6772,
+  "failed": 832,
+  "fail_rate": 0.123,
+  "pr_runs": 5632,
+  "pr_failed": 701,
+  "pr_fail_rate": 0.124,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 12,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "test": 15,
+    "build": 3
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 32003364633,
+      "event": "pull_request",
+      "workflow": ".github/workflows/external.yml",
+      "created_at": "2026-08-17T06:52:04Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/32003364633",
+      "jobs": [
+        {
+          "job": "test-external-cluster",
+          "failed_steps": [
+            "Run external test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test-external-nodebug",
+          "failed_steps": [
+            "Run external test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32001138120,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-17T06:18:57Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/32001138120",
+      "jobs": [
+        {
+          "job": "test-ubuntu-latest",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test-sanitizer-address",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30030151619,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-23T17:36:42Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30030151619",
+      "jobs": [
+        {
+          "job": "test-sanitizer-address",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30765856594,
+      "event": "pull_request",
+      "workflow": ".github/workflows/spell-check.yml",
+      "created_at": "2026-08-02T20:32:26Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30765856594",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 31712013089,
+      "event": "pull_request",
+      "workflow": ".github/workflows/codecov.yml",
+      "created_at": "2026-08-13T14:48:50Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/31712013089",
+      "jobs": [
+        {
+          "job": "code-coverage",
+          "failed_steps": [
+            "Install lcov and run test"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30998134255,
+      "event": "pull_request",
+      "workflow": ".github/workflows/codecov.yml",
+      "created_at": "2026-08-05T10:37:01Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30998134255",
+      "jobs": [
+        {
+          "job": "code-coverage",
+          "failed_steps": [
+            "Upload coverage reports to Codecov"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29725403567,
+      "event": "pull_request",
+      "workflow": ".github/workflows/codecov.yml",
+      "created_at": "2026-07-20T07:41:24Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/29725403567",
+      "jobs": [
+        {
+          "job": "code-coverage",
+          "failed_steps": [
+            "Install lcov and run test"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32775997119,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-24T20:48:40Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/32775997119",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30802266177,
+      "event": "pull_request",
+      "workflow": ".github/workflows/spell-check.yml",
+      "created_at": "2026-08-03T09:38:18Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30802266177",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32365950293,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-20T11:52:33Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/32365950293",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34475187856,
+      "event": "pull_request",
+      "workflow": ".github/workflows/external.yml",
+      "created_at": "2026-09-10T12:10:00Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/34475187856",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30766573249,
+      "event": "pull_request",
+      "workflow": ".github/workflows/spell-check.yml",
+      "created_at": "2026-08-02T20:51:53Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30766573249",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34660829795,
+      "event": "schedule",
+      "workflow": ".github/workflows/daily.yml",
+      "created_at": "2026-09-12T00:12:13Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/34660829795",
+      "jobs": [
+        {
+          "job": "test-sanitizer-thread (clang)",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test-ubuntu-32bit",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31601400962,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-12T13:26:18Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/31601400962",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30983875483,
+      "event": "pull_request",
+      "workflow": ".github/workflows/external.yml",
+      "created_at": "2026-08-05T07:08:27Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30983875483",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30033134680,
+      "event": "pull_request",
+      "workflow": ".github/workflows/daily.yml",
+      "created_at": "2026-07-23T18:18:22Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30033134680",
+      "jobs": [
+        {
+          "job": "test-ubuntu-arm",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        },
+        {
+          "job": "test-vectorset",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test-old-chain-jemalloc",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30017946900,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-23T14:53:34Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30017946900",
+      "jobs": [
+        {
+          "job": "test-ubuntu-latest",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test-sanitizer-address",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30022144231,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-23T15:47:14Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/30022144231",
+      "jobs": [
+        {
+          "job": "test-ubuntu-latest",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31586178982,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-12T10:09:40Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/31586178982",
+      "jobs": [
+        {
+          "job": "test-sanitizer-address",
+          "failed_steps": [
+            "test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29910858921,
+      "event": "pull_request",
+      "workflow": ".github/workflows/codecov.yml",
+      "created_at": "2026-07-22T10:09:56Z",
+      "html_url": "https://github.com/redis/redis/actions/runs/29910858921",
+      "jobs": [
+        {
+          "job": "code-coverage",
+          "failed_steps": [
+            "Install lcov and run test"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

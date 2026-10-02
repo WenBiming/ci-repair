@@ -72,6 +72,22 @@ Find a new open-source project with:
 - `kth_degree_project_proposal.docx` -- KTH template version (embedded framing, now
   outdated; personal sections still placeholders).
 
+## Screening status (2026-10-02)
+
+First full run done: `results/summary.md` (90 days, 20 samples/repo, ~14k API calls).
+Env: `.venv` (Python 3.12, requests); token via `GITHUB_TOKEN=$(gh auth token)`.
+Classifier fix: C/C++ errors from autoconf/CMake probes (conftest.c, TryCompile,
+Check*.c, CMake/*.c) and probe-only linker errors are no longer counted (curl dropped
+from 63% to 32% compile share). Spot-checked logs: Rust E-code and Go/tsc hits are real.
+Fit vs. examiner criteria (fail rate >= 20-25%, hundreds of compile failures / 6 mo):
+- meilisearch/meilisearch (Rust): 37% fail, ~10% of runs compile failures, ~250/6 mo. Best fit.
+- microsoft/TypeScript (now Go + TS, typescript-go): 29% PR fail, ~390/6 mo.
+- tauri-apps/tauri (Rust): ~2,500/6 mo but 11% fail rate; many errors are OS-specific
+  (gtk, windows crate) or missing targets -- platform dependence, like the embedded case.
+- ruff, rust-analyzer: plenty of compile failures, but 6-7% fail rate.
+Caveat: counts are per run; one bad commit fails several workflows. Deduplicate by
+head commit before quoting numbers.
+
 ## Experiment plan (once a project is chosen)
 
 1. Dataset: per compile failure store failing commit, CI log, toolchain version at

@@ -1,0 +1,498 @@
+{
+  "repo": "cli/cli",
+  "license": "MIT",
+  "stars": 46510,
+  "languages": {
+    "Go": 0.994,
+    "Shell": 0.005,
+    "Makefile": 0.0,
+    "PowerShell": 0.0,
+    "Batchfile": 0.0
+  },
+  "significant_languages": [
+    "Go"
+  ],
+  "ci_workflows": [
+    ".github/workflows/go.yml",
+    ".github/workflows/lint.yml",
+    ".github/workflows/bump-go.yml",
+    ".github/workflows/govulncheck.yml",
+    "dynamic/copilot-swe-agent/copilot",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    ".github/workflows/agentics-maintenance.yml",
+    ".github/workflows/copilot-setup-steps.yml",
+    ".github/workflows/spam-eval.yml",
+    ".github/workflows/acceptance.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/codeql.yml",
+    ".github/workflows/deployment.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/dependabot/update-graph",
+    ".github/workflows/triage-issues.yml",
+    ".github/workflows/triage-scheduled-tasks.yml",
+    ".github/workflows/triage-pull-requests.yml",
+    ".github/workflows/issue-triage.lock.yml",
+    ".github/workflows/dependabot-triage.lock.yml",
+    ""
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/go.yml",
+      "runs": 958,
+      "failed": 62,
+      "pr_runs": 737,
+      "pr_failed": 62
+    },
+    {
+      "path": ".github/workflows/lint.yml",
+      "runs": 663,
+      "failed": 60,
+      "pr_runs": 537,
+      "pr_failed": 60
+    },
+    {
+      "path": ".github/workflows/bump-go.yml",
+      "runs": 91,
+      "failed": 25,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/govulncheck.yml",
+      "runs": 90,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/copilot-swe-agent/copilot",
+      "runs": 7,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 212,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/agentics-maintenance.yml",
+      "runs": 69,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/copilot-setup-steps.yml",
+      "runs": 49,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/spam-eval.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 1,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/acceptance.yml",
+      "runs": 9,
+      "failed": 4,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 2149,
+  "failed": 151,
+  "fail_rate": 0.07,
+  "pr_runs": 1275,
+  "pr_failed": 122,
+  "pr_fail_rate": 0.096,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 10,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "test": 8,
+    "build": 1,
+    "other": 3
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 32104677891,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-08-18T05:54:00Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/32104677891",
+      "jobs": [
+        {
+          "job": "build (windows-latest)",
+          "failed_steps": [
+            "Run unit and integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30928568021,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-08-04T16:19:30Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/30928568021",
+      "jobs": [
+        {
+          "job": "build (windows-latest)",
+          "failed_steps": [
+            "Run unit and integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "build (ubuntu-latest)",
+          "failed_steps": [
+            "Run unit and integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "build (macos-latest)",
+          "failed_steps": [
+            "Run unit and integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31007586419,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint.yml",
+      "created_at": "2026-08-05T12:52:49Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/31007586419",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 28782262747,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint.yml",
+      "created_at": "2026-07-06T09:38:38Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/28782262747",
+      "jobs": [
+        {
+          "job": "govulncheck",
+          "failed_steps": [
+            "Check Go vulnerabilities"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35499316172,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-09-20T08:21:05Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/35499316172",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33660310773,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-09-02T17:19:03Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/33660310773",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32151359332,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-08-18T14:55:57Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/32151359332",
+      "jobs": [
+        {
+          "job": "build (windows-latest)",
+          "failed_steps": [
+            "Run unit and integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34306681406,
+      "event": "schedule",
+      "workflow": ".github/workflows/bump-go.yml",
+      "created_at": "2026-09-09T03:19:35Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/34306681406",
+      "jobs": [
+        {
+          "job": "bump-go",
+          "failed_steps": [
+            "Bump Go version"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32151359440,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-08-18T14:55:57Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/32151359440",
+      "jobs": [
+        {
+          "job": "build (windows-latest)",
+          "failed_steps": [
+            "Run unit and integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34247003602,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint.yml",
+      "created_at": "2026-09-08T15:47:20Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/34247003602",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30854644114,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-08-03T21:26:34Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/30854644114",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30901127041,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-08-04T10:33:16Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/30901127041",
+      "jobs": [
+        {
+          "job": "build (windows-latest)",
+          "failed_steps": [
+            "Run unit and integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32151358973,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-08-18T14:55:57Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/32151358973",
+      "jobs": [
+        {
+          "job": "build (windows-latest)",
+          "failed_steps": [
+            "Run unit and integration tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35594181154,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-09-21T11:27:50Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/35594181154",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 36691198489,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-09-30T08:40:43Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/36691198489",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32615229196,
+      "event": "schedule",
+      "workflow": ".github/workflows/bump-go.yml",
+      "created_at": "2026-08-23T03:23:35Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/32615229196",
+      "jobs": [
+        {
+          "job": "bump-go",
+          "failed_steps": [
+            "Bump Go version"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33941479699,
+      "event": "schedule",
+      "workflow": ".github/workflows/bump-go.yml",
+      "created_at": "2026-09-05T03:18:20Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/33941479699",
+      "jobs": [
+        {
+          "job": "bump-go",
+          "failed_steps": [
+            "Bump Go version"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34044444606,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-09-06T16:07:32Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/34044444606",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34252522606,
+      "event": "pull_request",
+      "workflow": ".github/workflows/lint.yml",
+      "created_at": "2026-09-08T16:40:43Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/34252522606",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35567050488,
+      "event": "pull_request",
+      "workflow": ".github/workflows/go.yml",
+      "created_at": "2026-09-21T06:07:18Z",
+      "html_url": "https://github.com/cli/cli/actions/runs/35567050488",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    }
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "repo": "nushell/nushell",
+  "license": "MIT",
+  "stars": 40610,
+  "languages": {
+    "Rust": 0.972,
+    "Nushell": 0.026,
+    "Nix": 0.001,
+    "Python": 0.001,
+    "JavaScript": 0.0,
+    "Dockerfile": 0.0,
+    "Shell": 0.0,
+    "PowerShell": 0.0,
+    "Batchfile": 0.0
+  },
+  "significant_languages": [
+    "Rust"
+  ],
+  "ci_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/winget-submission.yml",
+    ".github/workflows/typos.yml",
+    ".github/workflows/beta-test.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/agents/copilot-pull-request-reviewer"
+  ],
+  "excluded_workflows": [
+    "",
+    ".github/workflows/release.yml",
+    ".github/workflows/nightly-build.yml",
+    ".github/workflows/audit.yml",
+    ".github/workflows/milestone.yml",
+    "dynamic/dependabot/dependabot-updates",
+    ".github/workflows/labels.yml",
+    ".github/workflows/release-msi.yml",
+    ".github/workflows/friendly-config-reminder.yml",
+    ".github/workflows/pre-release-checkup.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 1820,
+      "failed": 291,
+      "pr_runs": 1459,
+      "pr_failed": 262
+    },
+    {
+      "path": ".github/workflows/winget-submission.yml",
+      "runs": 5,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/typos.yml",
+      "runs": 1348,
+      "failed": 52,
+      "pr_runs": 1434,
+      "pr_failed": 52
+    },
+    {
+      "path": ".github/workflows/beta-test.yml",
+      "runs": 90,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 50,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 3313,
+  "failed": 344,
+  "fail_rate": 0.104,
+  "pr_runs": 2893,
+  "pr_failed": 314,
+  "pr_fail_rate": 0.109,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 20,
+  "compile_share_of_failures": 0.15,
+  "est_compile_failures": 52,
+  "est_compile_fail_rate": 0.016,
+  "failed_step_categories": {
+    "lint": 11,
+    "test": 8,
+    "build": 1,
+    "other": 1
+  },
+  "compilers_seen": {
+    "rustc": 3
+  },
+  "samples": [
+    {
+      "run_id": 33341333906,
+      "event": "pull_request",
+      "workflow": ".github/workflows/typos.yml",
+      "created_at": "2026-08-30T23:15:29Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/33341333906",
+      "jobs": [
+        {
+          "job": "Spell Check with Typos",
+          "failed_steps": [
+            "Check spelling"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29710108416,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-20T00:53:07Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/29710108416",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Windows)",
+          "failed_steps": [
+            "cargo clippy"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29609071339,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T19:51:22Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/29609071339",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Windows)",
+          "failed_steps": [
+            "cargo clippy"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 30806975240,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-03T10:47:52Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/30806975240",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Ubuntu)",
+          "failed_steps": [
+            "cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30137197247,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-25T00:49:59Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/30137197247",
+      "jobs": [
+        {
+          "job": "`cargo` in root (MacOS)",
+          "failed_steps": [
+            "cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30155270309,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-25T10:53:26Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/30155270309",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Ubuntu)",
+          "failed_steps": [
+            "cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29655368059,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-18T18:11:09Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/29655368059",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Windows)",
+          "failed_steps": [
+            "cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29880231820,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-22T00:26:19Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/29880231820",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Ubuntu)",
+          "failed_steps": [
+            "cargo clippy"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "rustc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 36639493358,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-29T22:25:36Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/36639493358",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Windows)",
+          "failed_steps": [
+            "cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29214807663,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-13T00:11:07Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/29214807663",
+      "jobs": [
+        {
+          "job": "`cargo` in nu-parser/fuzz (Ubuntu)",
+          "failed_steps": [
+            "cargo fmt"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31619735931,
+      "event": "pull_request",
+      "workflow": ".github/workflows/typos.yml",
+      "created_at": "2026-08-12T16:51:56Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/31619735931",
+      "jobs": [
+        {
+          "job": "Spell Check with Typos",
+          "failed_steps": [
+            "Check spelling"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33677045107,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-02T20:03:58Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/33677045107",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Windows)",
+          "failed_steps": [
+            "cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29558253593,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T05:47:45Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/29558253593",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Ubuntu)",
+          "failed_steps": [
+            "cargo fmt"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29562388440,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T07:12:58Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/29562388440",
+      "jobs": [
+        {
+          "job": "`cargo` in nu-parser/fuzz (Ubuntu)",
+          "failed_steps": [
+            "cargo fmt"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30111261190,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-24T17:00:01Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/30111261190",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Ubuntu)",
+          "failed_steps": [
+            "cargo clippy"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30171582248,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-25T19:25:51Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/30171582248",
+      "jobs": [
+        {
+          "job": "`cargo` in root (MacOS)",
+          "failed_steps": [
+            "cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30137208795,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-25T00:50:15Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/30137208795",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Ubuntu)",
+          "failed_steps": [
+            "cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35098723673,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-16T12:55:53Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/35098723673",
+      "jobs": [
+        {
+          "job": "std-lib-and-python-virtualenv (incredibuild-ubuntu-2204, py)",
+          "failed_steps": [
+            "Check for clean repo"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "`cargo` in nu-parser/fuzz (Ubuntu)",
+          "failed_steps": [
+            "Assert Clean Repo"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33216329735,
+      "event": "pull_request",
+      "workflow": ".github/workflows/typos.yml",
+      "created_at": "2026-08-28T22:19:27Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/33216329735",
+      "jobs": [
+        {
+          "job": "Spell Check with Typos",
+          "failed_steps": [
+            "Check spelling"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29606826652,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T19:14:56Z",
+      "html_url": "https://github.com/nushell/nushell/actions/runs/29606826652",
+      "jobs": [
+        {
+          "job": "`cargo` in root (Ubuntu)",
+          "failed_steps": [
+            "cargo clippy"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

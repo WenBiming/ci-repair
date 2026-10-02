@@ -1,0 +1,885 @@
+{
+  "repo": "vitejs/vite",
+  "license": "MIT",
+  "stars": 83096,
+  "languages": {
+    "TypeScript": 0.834,
+    "JavaScript": 0.092,
+    "HTML": 0.044,
+    "CSS": 0.025,
+    "Vue": 0.002,
+    "Svelte": 0.002,
+    "SCSS": 0.001,
+    "Less": 0.001,
+    "Stylus": 0.0,
+    "Shell": 0.0,
+    "SugarSS": 0.0,
+    "Pug": 0.0,
+    "Sass": 0.0,
+    "Astro": 0.0
+  },
+  "significant_languages": [
+    "TypeScript"
+  ],
+  "ci_workflows": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/semantic-pull-request.yml",
+    ".github/workflows/ecosystem-ci-trigger.yml",
+    "dynamic/copilot-swe-agent/copilot",
+    ".github/workflows/copilot-setup-steps.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    ".github/workflows/pr-template-check.yml",
+    ".github/workflows/codespell.yml",
+    "dynamic/agents/anthropic-code-agent",
+    ".github/workflows/zizmor.yml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    ".github/workflows/semgrep.yml",
+    ".github/workflows/bot.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/issue-close-require.yml",
+    ".github/workflows/issue-labeled.yml",
+    ".github/workflows/lock-closed-issues.yml",
+    ".github/workflows/publish.yml",
+    ".github/workflows/preview-release.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/github-code-scanning/codeql",
+    ".github/workflows/prepare-release.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 1990,
+      "failed": 834,
+      "pr_runs": 1375,
+      "pr_failed": 634
+    },
+    {
+      "path": ".github/workflows/semantic-pull-request.yml",
+      "runs": 1990,
+      "failed": 31,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/ecosystem-ci-trigger.yml",
+      "runs": 962,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/copilot-setup-steps.yml",
+      "runs": 110,
+      "failed": 2,
+      "pr_runs": 31,
+      "pr_failed": 1
+    },
+    {
+      "path": ".github/workflows/zizmor.yml",
+      "runs": 1539,
+      "failed": 19,
+      "pr_runs": 1507,
+      "pr_failed": 19
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 8,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/semgrep.yml",
+      "runs": 14,
+      "failed": 3,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/bot.yml",
+      "runs": 422,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 7035,
+  "failed": 889,
+  "fail_rate": 0.126,
+  "pr_runs": 2913,
+  "pr_failed": 654,
+  "pr_fail_rate": 0.225,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 20,
+  "compile_share_of_failures": 0.05,
+  "est_compile_failures": 44,
+  "est_compile_fail_rate": 0.006,
+  "failed_step_categories": {
+    "test": 14,
+    "build": 17,
+    "lint": 8,
+    "other": 2
+  },
+  "compilers_seen": {
+    "tsc": 1
+  },
+  "samples": [
+    {
+      "run_id": 30900925333,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-04T10:30:28Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/30900925333",
+      "jobs": [
+        {
+          "job": "Build&Test: node-22, ubuntu-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29584733657,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T13:38:21Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/29584733657",
+      "jobs": [
+        {
+          "job": "Build&Test: node-20, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-26, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28994040857,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T04:27:06Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/28994040857",
+      "jobs": [
+        {
+          "job": "Build&Test: node-24, macos-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-26, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31756252248,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-14T00:06:58Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/31756252248",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Check formatting"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24, macos-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-22, ubuntu-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30104240812,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-24T15:11:51Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/30104240812",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Check formatting"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29231936514,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-13T07:23:50Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/29231936514",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Check formatting"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29385697268,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T03:05:56Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/29385697268",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Check formatting"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29562652626,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T07:18:00Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/29562652626",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Typecheck"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Test unit"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-26, ubuntu-latest",
+          "failed_steps": [
+            "Test unit"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 31757466675,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-14T00:28:33Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/31757466675",
+      "jobs": [
+        {
+          "job": "Build&Test: node-20, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24, macos-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28718005041,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-04T20:00:57Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/28718005041",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Check formatting"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-26, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30798565352,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-03T08:44:28Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/30798565352",
+      "jobs": [
+        {
+          "job": "Build&Test: node-24, macos-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-20, ubuntu-latest",
+          "failed_steps": [
+            "Test serve (bundled dev)"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36677171232,
+      "event": "pull_request_target",
+      "workflow": ".github/workflows/semantic-pull-request.yml",
+      "created_at": "2026-09-30T06:13:49Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/36677171232",
+      "jobs": [
+        {
+          "job": "Semantic Pull Request",
+          "failed_steps": [
+            "Validate PR title"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31103988297,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-06T13:01:28Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/31103988297",
+      "jobs": [
+        {
+          "job": "Build&Test: node-20, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28775300339,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-06T07:32:06Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/28775300339",
+      "jobs": [
+        {
+          "job": "Build&Test: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24, macos-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31022517981,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-05T15:52:50Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/31022517981",
+      "jobs": [
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30553713136,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-30T14:50:39Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/30553713136",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Lint"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-26, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28990421868,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T02:46:11Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/28990421868",
+      "jobs": [
+        {
+          "job": "Build&Test: node-22, ubuntu-latest",
+          "failed_steps": [
+            "Test build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28990837795,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T02:57:58Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/28990837795",
+      "jobs": [
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28764193686,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-06T02:37:16Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/28764193686",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Check formatting"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29404207898,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T09:21:45Z",
+      "html_url": "https://github.com/vitejs/vite/actions/runs/29404207898",
+      "jobs": [
+        {
+          "job": "Lint: node-24, ubuntu-latest",
+          "failed_steps": [
+            "Check formatting"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-24.15.0, windows-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Build&Test: node-26, ubuntu-latest",
+          "failed_steps": [
+            "Test serve"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

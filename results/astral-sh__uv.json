@@ -1,0 +1,783 @@
+{
+  "repo": "astral-sh/uv",
+  "license": "Apache-2.0",
+  "stars": 90361,
+  "languages": {
+    "Rust": 0.978,
+    "Python": 0.019,
+    "Shell": 0.002,
+    "PowerShell": 0.0,
+    "Batchfile": 0.0,
+    "Dockerfile": 0.0,
+    "Nushell": 0.0,
+    "Xonsh": 0.0,
+    "Jupyter Notebook": 0.0,
+    "C": 0.0,
+    "RenderScript": 0.0
+  },
+  "significant_languages": [
+    "Rust"
+  ],
+  "ci_workflows": [
+    ".github/workflows/affected-test.yml",
+    ".github/workflows/build-dev-binaries.yml",
+    ".github/workflows/build-docker.yml",
+    ".github/workflows/check-crates-policies.yml",
+    ".github/workflows/check-docs.yml",
+    ".github/workflows/check-fmt.yml",
+    ".github/workflows/check-generated-files.yml",
+    ".github/workflows/check-lint.yml",
+    ".github/workflows/check-zizmor.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/coverage.yml",
+    ".github/workflows/diagnose-workflow-failure.yml",
+    ".github/workflows/fix-bug.yml",
+    ".github/workflows/import-codspeed-profiles.yml",
+    ".github/workflows/linux-runner-samples.yml",
+    ".github/workflows/plan.yml",
+    ".github/workflows/promote-pull-request.yml",
+    ".github/workflows/pull-request-conflicts.yml",
+    ".github/workflows/pull-request-review.yml",
+    ".github/workflows/pull-request-reviewers.yml",
+    ".github/workflows/rebase-conflicted-pull-request.yml",
+    ".github/workflows/reproduce-bug.yml",
+    ".github/workflows/temporary-native-auth-windows.yml",
+    ".github/workflows/temporary-windows-pgo-replay.yml",
+    ".github/workflows/temporary-windows-pgo-timing.yml",
+    ".github/workflows/test-ecosystem.yml",
+    ".github/workflows/test-integration.yml",
+    ".github/workflows/test-inventory.yml",
+    ".github/workflows/test-smoke.yml",
+    ".github/workflows/test-system.yml",
+    ".github/workflows/test-windows-trampolines.yml",
+    ".github/workflows/test.yml",
+    ".github/workflows/update-issue-context.yml",
+    ".github/workflows/update-pull-request-parent.yml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/copilot-swe-agent/copilot"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/bench.yml",
+    ".github/workflows/build-release-binaries.yml",
+    ".github/workflows/check-lock.yml",
+    ".github/workflows/check-publish.yml",
+    ".github/workflows/check-release.yml",
+    ".github/workflows/issue-triage-preview.yml",
+    ".github/workflows/issue-triage.yml",
+    ".github/workflows/publish-crates.yml",
+    ".github/workflows/publish-docker-image.yml",
+    ".github/workflows/publish-docker.yml",
+    ".github/workflows/publish-docs.yml",
+    ".github/workflows/publish-mirror.yml",
+    ".github/workflows/publish-pypi.yml",
+    ".github/workflows/publish-versions.yml",
+    ".github/workflows/pull-request-labels.yml",
+    ".github/workflows/release-prepare.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/sign-release-binaries.yml",
+    ".github/workflows/sync-python-releases.yml",
+    ".github/workflows/sync-uv-dev.yml",
+    ".github/workflows/sync-uv-security.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/dependabot/update-graph"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 7342,
+      "failed": 1181,
+      "pr_runs": 6090,
+      "pr_failed": 879
+    },
+    {
+      "path": ".github/workflows/coverage.yml",
+      "runs": 8,
+      "failed": 2,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/diagnose-workflow-failure.yml",
+      "runs": 1430,
+      "failed": 196,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/import-codspeed-profiles.yml",
+      "runs": 277,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/linux-runner-samples.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/pull-request-conflicts.yml",
+      "runs": 943,
+      "failed": 28,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/pull-request-review.yml",
+      "runs": 5,
+      "failed": 0,
+      "pr_runs": 5,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/pull-request-reviewers.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 1,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/reproduce-bug.yml",
+      "runs": 41,
+      "failed": 16,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/temporary-windows-pgo-replay.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/temporary-windows-pgo-timing.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/update-issue-context.yml",
+      "runs": 1459,
+      "failed": 60,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 5,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 11514,
+  "failed": 1483,
+  "fail_rate": 0.129,
+  "pr_runs": 6096,
+  "pr_failed": 879,
+  "pr_fail_rate": 0.144,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 20,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "other": 12,
+    "test": 9,
+    "build": 6,
+    "setup": 1
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 31629978231,
+      "event": "issue_comment",
+      "workflow": ".github/workflows/update-issue-context.yml",
+      "created_at": "2026-08-12T18:54:15Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/31629978231",
+      "jobs": [
+        {
+          "job": "persist",
+          "failed_steps": [
+            "Get issue context token"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29511671433,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-16T15:33:23Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29511671433",
+      "jobs": [
+        {
+          "job": "test / cargo test on windows 1 of 3",
+          "failed_steps": [
+            "Cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "all required jobs passed",
+          "failed_steps": [
+            "Check required jobs passed"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29027855980,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T15:02:27Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29027855980",
+      "jobs": [
+        {
+          "job": "test-system / python on rocky linux 10",
+          "failed_steps": [
+            "Install Python"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29714072227,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-20T03:10:34Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29714072227",
+      "jobs": [
+        {
+          "job": "review / security review",
+          "failed_steps": [
+            "Review pull request"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29858463283,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-21T18:43:47Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29858463283",
+      "jobs": [
+        {
+          "job": "check-lint / hawk",
+          "failed_steps": [
+            "Hawk"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test / cargo test on linux",
+          "failed_steps": [
+            "Cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test / cargo test on windows 3 of 3",
+          "failed_steps": [
+            "Cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29997596577,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-23T10:00:05Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29997596577",
+      "jobs": [
+        {
+          "job": "build-dev-binaries / freebsd",
+          "failed_steps": [
+            "Cross build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "all required jobs passed",
+          "failed_steps": [
+            "Check required jobs passed"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29428910294,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T15:37:33Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29428910294",
+      "jobs": [
+        {
+          "job": "test / cargo test on windows 1 of 3",
+          "failed_steps": [
+            "Cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "all required jobs passed",
+          "failed_steps": [
+            "Check required jobs passed"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29611046535,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T20:23:58Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29611046535",
+      "jobs": [
+        {
+          "job": "test uv publish",
+          "failed_steps": [
+            "Publish test packages"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31527837197,
+      "event": "issue_comment",
+      "workflow": ".github/workflows/update-issue-context.yml",
+      "created_at": "2026-08-11T19:26:10Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/31527837197",
+      "jobs": [
+        {
+          "job": "persist",
+          "failed_steps": [
+            "Get issue context token"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35239950960,
+      "event": "workflow_dispatch",
+      "workflow": ".github/workflows/diagnose-workflow-failure.yml",
+      "created_at": "2026-09-17T15:23:47Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/35239950960",
+      "jobs": [
+        {
+          "job": "diagnose",
+          "failed_steps": [
+            "Collect workflow failure context"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28867102242,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-07T12:44:47Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/28867102242",
+      "jobs": [
+        {
+          "job": "check-publish / cargo publish dry-run",
+          "failed_steps": [
+            "cargo publish dry-run"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29855789752,
+      "event": "push",
+      "workflow": ".github/workflows/pull-request-conflicts.yml",
+      "created_at": "2026-07-21T18:06:17Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29855789752",
+      "jobs": [
+        {
+          "job": "Rebase pull request #20551 / Push rebased pull request #20551",
+          "failed_steps": [
+            "Get uv-dev token"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31020906884,
+      "event": "workflow_dispatch",
+      "workflow": ".github/workflows/diagnose-workflow-failure.yml",
+      "created_at": "2026-08-05T15:33:34Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/31020906884",
+      "jobs": [
+        {
+          "job": "report",
+          "failed_steps": [
+            "Report workflow failure"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28986030642,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T00:47:06Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/28986030642",
+      "jobs": [
+        {
+          "job": "test / cargo test on linux",
+          "failed_steps": [
+            "Cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "all required jobs passed",
+          "failed_steps": [
+            "Check required jobs passed"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29017184836,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T12:09:11Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29017184836",
+      "jobs": [
+        {
+          "job": "check-lint / hawk",
+          "failed_steps": [
+            "Hawk"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28836601234,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-07T02:11:37Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/28836601234",
+      "jobs": [
+        {
+          "job": "check-publish / cargo publish dry-run",
+          "failed_steps": [
+            "cargo publish dry-run"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30014366144,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-23T14:07:48Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/30014366144",
+      "jobs": [
+        {
+          "job": "test-smoke / windows x86_64",
+          "failed_steps": [
+            "Download binary"
+          ],
+          "step_category": "setup",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29882093842,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-22T01:04:43Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/29882093842",
+      "jobs": [
+        {
+          "job": "test / cargo test on linux",
+          "failed_steps": [
+            "Cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test / cargo test on windows 3 of 3",
+          "failed_steps": [
+            "Cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test / cargo test on windows 2 of 3",
+          "failed_steps": [
+            "Cargo test"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33086317178,
+      "event": "workflow_dispatch",
+      "workflow": ".github/workflows/diagnose-workflow-failure.yml",
+      "created_at": "2026-08-27T15:10:05Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/33086317178",
+      "jobs": [
+        {
+          "job": "diagnose",
+          "failed_steps": [
+            "Collect workflow failure context"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30824243249,
+      "event": "push",
+      "workflow": ".github/workflows/pull-request-conflicts.yml",
+      "created_at": "2026-08-03T14:45:40Z",
+      "html_url": "https://github.com/astral-sh/uv/actions/runs/30824243249",
+      "jobs": [
+        {
+          "job": "Rebase pull request #20913 / Push rebased pull request #20913",
+          "failed_steps": [
+            "Get pull request head token"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+{
+  "repo": "apache/commons-lang",
+  "license": "Apache-2.0",
+  "stars": 3013,
+  "languages": {
+    "Java": 0.982,
+    "HTML": 0.018,
+    "Shell": 0.0
+  },
+  "significant_languages": [
+    "Java"
+  ],
+  "ci_workflows": [
+    "",
+    ".github/workflows/maven.yml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/codeql-analysis.yml",
+    ".github/workflows/dependency-review.yml",
+    ".github/workflows/scorecards-analysis.yml",
+    "dynamic/dependabot/dependabot-updates"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/maven.yml",
+      "runs": 279,
+      "failed": 26,
+      "pr_runs": 86,
+      "pr_failed": 17
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 21,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 300,
+  "failed": 26,
+  "fail_rate": 0.087,
+  "pr_runs": 86,
+  "pr_failed": 17,
+  "pr_fail_rate": 0.198,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 11,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "build": 11
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 35658543927,
+      "event": "push",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-21T21:40:33Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/35658543927",
+      "jobs": [
+        {
+          "job": "build (ubuntu-latest, 26, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30641482695,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-07-31T15:06:46Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/30641482695",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29603447550,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-07-17T18:20:30Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/29603447550",
+      "jobs": [
+        {
+          "job": "build (ubuntu-latest, 8, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32882583221,
+      "event": "push",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-08-25T18:14:20Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/32882583221",
+      "jobs": [
+        {
+          "job": "build (windows-latest, 11, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30269267233,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-07-27T13:13:22Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/30269267233",
+      "jobs": [
+        {
+          "job": "build (macos-latest, 8, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36754740301,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-30T17:54:21Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/36754740301",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30537724407,
+      "event": "push",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-07-30T11:13:34Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/30537724407",
+      "jobs": [
+        {
+          "job": "build (windows-latest, 21, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36242097507,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-26T12:29:54Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/36242097507",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33936288726,
+      "event": "push",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-05T01:28:56Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/33936288726",
+      "jobs": [
+        {
+          "job": "build (ubuntu-latest, 8, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29586491585,
+      "event": "push",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-07-17T14:04:42Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/29586491585",
+      "jobs": [
+        {
+          "job": "build (ubuntu-latest, 11, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33345329407,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-08-31T00:41:45Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/33345329407",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 36257389430,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-26T16:59:01Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/36257389430",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34239026891,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-08T14:33:30Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/34239026891",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29587003365,
+      "event": "push",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-07-17T14:12:10Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/29587003365",
+      "jobs": [
+        {
+          "job": "build (ubuntu-latest, 8, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34864517728,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-14T15:47:50Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/34864517728",
+      "jobs": [
+        {
+          "job": "build (macos-latest, 8, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33558126379,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-01T20:55:24Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/33558126379",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 36260025982,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-26T17:43:15Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/36260025982",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 34192304527,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-08T05:52:23Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/34192304527",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33562417465,
+      "event": "push",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-09-01T21:41:16Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/33562417465",
+      "jobs": [
+        {
+          "job": "build (macos-latest, 8, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30504604065,
+      "event": "pull_request",
+      "workflow": ".github/workflows/maven.yml",
+      "created_at": "2026-07-30T01:04:37Z",
+      "html_url": "https://github.com/apache/commons-lang/actions/runs/30504604065",
+      "jobs": [
+        {
+          "job": "build (windows-latest, 8, false)",
+          "failed_steps": [
+            "Build with Maven"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

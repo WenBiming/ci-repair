@@ -1,0 +1,620 @@
+{
+  "repo": "angular/angular",
+  "license": "MIT",
+  "stars": 101009,
+  "languages": {
+    "TypeScript": 0.874,
+    "JavaScript": 0.068,
+    "HTML": 0.021,
+    "Starlark": 0.019,
+    "CSS": 0.011,
+    "SCSS": 0.008,
+    "Shell": 0.0
+  },
+  "significant_languages": [
+    "TypeScript"
+  ],
+  "ci_workflows": [
+    ".github/workflows/dev-infra.yml",
+    ".github/workflows/google-internal-tests.yml",
+    ".github/workflows/assistant-to-the-branch-manager.yml",
+    ".github/workflows/update-cli-help.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/pr.yml",
+    ".github/workflows/update-cdk-apis-and-cli-help.yml",
+    ".github/workflows/cross-repo-adev-docs.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer"
+  ],
+  "excluded_workflows": [
+    "",
+    ".github/workflows/aio-preview-build.yml",
+    ".github/workflows/benchmark-compare.yml",
+    "dynamic/github-code-scanning/codeql",
+    ".github/workflows/adev-preview-build.yml",
+    ".github/workflows/adev-preview-deploy.yml",
+    "dynamic/dependabot/dependabot-updates",
+    ".github/workflows/perf.yml",
+    ".github/workflows/release.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/dev-infra.yml",
+      "runs": 3929,
+      "failed": 3,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/google-internal-tests.yml",
+      "runs": 3655,
+      "failed": 5,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/assistant-to-the-branch-manager.yml",
+      "runs": 9712,
+      "failed": 15,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 1566,
+      "failed": 53,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/pr.yml",
+      "runs": 3371,
+      "failed": 1051,
+      "pr_runs": 3371,
+      "pr_failed": 1051
+    },
+    {
+      "path": ".github/workflows/update-cdk-apis-and-cli-help.yml",
+      "runs": 24,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/cross-repo-adev-docs.yml",
+      "runs": 1544,
+      "failed": 7,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 23801,
+  "failed": 1134,
+  "fail_rate": 0.048,
+  "pr_runs": 3371,
+  "pr_failed": 1051,
+  "pr_fail_rate": 0.312,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 17,
+  "compile_share_of_failures": 0.118,
+  "est_compile_failures": 133,
+  "est_compile_fail_rate": 0.006,
+  "failed_step_categories": {
+    "test": 8,
+    "lint": 1,
+    "build": 7,
+    "other": 6
+  },
+  "compilers_seen": {
+    "tsc": 2
+  },
+  "samples": [
+    {
+      "run_id": 28868516968,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-07T13:07:05Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/28868516968",
+      "jobs": [
+        {
+          "job": "vscode-ng-language-service",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Check code format"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29035261643,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T16:56:45Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/29035261643",
+      "jobs": [
+        {
+          "job": "devtools",
+          "failed_steps": [
+            "Run unit tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30362055823,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-28T13:07:52Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/30362055823",
+      "jobs": [
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Check commit message"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30525649696,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-30T08:10:35Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/30525649696",
+      "jobs": [
+        {
+          "job": "test",
+          "failed_steps": [
+            "Run CI tests for framework"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30576028447,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-30T19:43:05Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/30576028447",
+      "jobs": [
+        {
+          "job": "test",
+          "failed_steps": [
+            "Run CI tests for framework"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 29500106768,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-16T12:56:10Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/29500106768",
+      "jobs": [
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Check commit message"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test",
+          "failed_steps": [
+            "Run CI tests for framework"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28889792866,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-07T18:36:40Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/28889792866",
+      "jobs": [
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Validate agent skills"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "adev",
+          "failed_steps": [
+            "Run tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28969791814,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-08T19:27:14Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/28969791814",
+      "jobs": [
+        {
+          "job": "devtools",
+          "failed_steps": [
+            "Cypress run"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31532500603,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-08-11T20:21:23Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/31532500603",
+      "jobs": [
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Check commit message"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29453310081,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T21:49:53Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/29453310081",
+      "jobs": [
+        {
+          "job": "adev-deploy",
+          "failed_steps": [
+            "Deploy to firebase"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29457046281,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T22:56:56Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/29457046281",
+      "jobs": [
+        {
+          "job": "adev-deploy",
+          "failed_steps": [
+            "Deploy to firebase"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28946814941,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-08T13:35:24Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/28946814941",
+      "jobs": [
+        {
+          "job": "devtools",
+          "failed_steps": [
+            "Run unit tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": true,
+          "compilers": [
+            "tsc"
+          ],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": true
+    },
+    {
+      "run_id": 30595547306,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-31T01:08:43Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/30595547306",
+      "jobs": [
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Check commit message"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30554186862,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-30T14:56:15Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/30554186862",
+      "jobs": [
+        {
+          "job": "devtools",
+          "failed_steps": [
+            "Run unit tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32068863667,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-08-17T21:00:51Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/32068863667",
+      "jobs": [
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Validate agent skills"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29471251616,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-16T04:23:25Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/29471251616",
+      "jobs": [
+        {
+          "job": "adev-deploy",
+          "failed_steps": [
+            "Deploy to firebase"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29738984445,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-20T11:33:46Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/29738984445",
+      "jobs": [
+        {
+          "job": "lint",
+          "failed_steps": [
+            "Install node modules"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "adev",
+          "failed_steps": [
+            "Install node modules"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "test",
+          "failed_steps": [
+            "Install node modules"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31568339197,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-08-12T05:58:56Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/31568339197",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30584660586,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-07-30T21:45:45Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/30584660586",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32396325589,
+      "event": "pull_request",
+      "workflow": ".github/workflows/pr.yml",
+      "created_at": "2026-08-20T17:12:35Z",
+      "html_url": "https://github.com/angular/angular/actions/runs/32396325589",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    }
+  ]
+}

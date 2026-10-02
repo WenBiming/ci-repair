@@ -1,0 +1,491 @@
+{
+  "repo": "etcd-io/etcd",
+  "license": "Apache-2.0",
+  "stars": 52320,
+  "languages": {
+    "Go": 0.96,
+    "Shell": 0.023,
+    "Jsonnet": 0.01,
+    "Makefile": 0.004,
+    "Procfile": 0.001,
+    "Dockerfile": 0.001
+  },
+  "significant_languages": [
+    "Go"
+  ],
+  "ci_workflows": [
+    ".github/workflows/gh-workflow-approve.yaml",
+    ".github/workflows/measure-testgrid-flakiness.yaml",
+    ".github/workflows/antithesis-test.yml",
+    ".github/workflows/antithesis-verify.yml",
+    ".github/workflows/antithesis.debugger.yml",
+    ".github/workflows/robustness-regression.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    ".github/workflows/bump-devcontainer-version.yml",
+    "dynamic/copilot-swe-agent/copilot",
+    "dynamic/agents/copilot-pull-request-reviewer"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/codeql-analysis.yml",
+    ".github/workflows/scorecards.yml",
+    "dynamic/dependabot/dependabot-updates",
+    ".github/workflows/verify-released-assets.yaml",
+    ".github/workflows/stale.yaml",
+    "dynamic/dependabot/update-graph",
+    ".github/workflows/cherrypick-bot-ok-to-test.yaml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/gh-workflow-approve.yaml",
+      "runs": 2297,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "runs": 90,
+      "failed": 90,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/antithesis-test.yml",
+      "runs": 92,
+      "failed": 1,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/antithesis-verify.yml",
+      "runs": 63,
+      "failed": 19,
+      "pr_runs": 54,
+      "pr_failed": 19
+    },
+    {
+      "path": ".github/workflows/bump-devcontainer-version.yml",
+      "runs": 622,
+      "failed": 74,
+      "pr_runs": 598,
+      "pr_failed": 50
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 3165,
+  "failed": 185,
+  "fail_rate": 0.058,
+  "pr_runs": 652,
+  "pr_failed": 69,
+  "pr_fail_rate": 0.106,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 13,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "other": 12,
+    "build": 1
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 32204080588,
+      "event": "pull_request",
+      "workflow": ".github/workflows/bump-devcontainer-version.yml",
+      "created_at": "2026-08-19T01:12:14Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/32204080588",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30137140826,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-07-25T00:48:20Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/30137140826",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28725040955,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-07-05T00:59:05Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/28725040955",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33934139452,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-09-05T00:47:49Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/33934139452",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33284395882,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-08-30T00:53:52Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/33284395882",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33823231589,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-09-04T00:47:49Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/33823231589",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30676490258,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-08-01T00:49:48Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/30676490258",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30228424923,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-07-27T00:52:02Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/30228424923",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33409947464,
+      "event": "pull_request",
+      "workflow": ".github/workflows/bump-devcontainer-version.yml",
+      "created_at": "2026-08-31T15:42:05Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/33409947464",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30299988753,
+      "event": "push",
+      "workflow": ".github/workflows/bump-devcontainer-version.yml",
+      "created_at": "2026-07-27T19:50:21Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/30299988753",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30594650880,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-07-31T00:49:42Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/30594650880",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31731255021,
+      "event": "pull_request",
+      "workflow": ".github/workflows/bump-devcontainer-version.yml",
+      "created_at": "2026-08-13T18:32:29Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/31731255021",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33605949990,
+      "event": "pull_request",
+      "workflow": ".github/workflows/antithesis-verify.yml",
+      "created_at": "2026-09-02T07:54:42Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/33605949990",
+      "jobs": [
+        {
+          "job": "Test 3-node cluster",
+          "failed_steps": [
+            "Build etcd-server and etcd-client images"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29545741506,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-07-17T00:47:34Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/29545741506",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28689886727,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-07-04T00:53:14Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/28689886727",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": false
+        }
+      ],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30503564901,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-07-30T00:43:48Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/30503564901",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32607647324,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-08-23T00:21:46Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/32607647324",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33576964254,
+      "event": "schedule",
+      "workflow": ".github/workflows/measure-testgrid-flakiness.yaml",
+      "created_at": "2026-09-02T00:50:29Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/33576964254",
+      "jobs": [
+        {
+          "job": "Measure TestGrid Flakiness",
+          "failed_steps": [
+            "Run set -euo pipefail"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30563415552,
+      "event": "pull_request",
+      "workflow": ".github/workflows/bump-devcontainer-version.yml",
+      "created_at": "2026-07-30T16:52:16Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/30563415552",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 31524121003,
+      "event": "pull_request",
+      "workflow": ".github/workflows/bump-devcontainer-version.yml",
+      "created_at": "2026-08-11T18:42:29Z",
+      "html_url": "https://github.com/etcd-io/etcd/actions/runs/31524121003",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    }
+  ]
+}

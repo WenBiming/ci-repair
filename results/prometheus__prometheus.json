@@ -1,0 +1,775 @@
+{
+  "repo": "prometheus/prometheus",
+  "license": "Apache-2.0",
+  "stars": 66337,
+  "languages": {
+    "Go": 0.88,
+    "TypeScript": 0.106,
+    "Yacc": 0.004,
+    "Shell": 0.003,
+    "JavaScript": 0.002,
+    "SCSS": 0.001,
+    "CSS": 0.001,
+    "Lex": 0.001,
+    "Makefile": 0.001,
+    "HTML": 0.0,
+    "Dockerfile": 0.0,
+    "Go Template": 0.0
+  },
+  "significant_languages": [
+    "Go",
+    "TypeScript"
+  ],
+  "ci_workflows": [
+    ".github/workflows/approve-workflows.yml",
+    ".github/workflows/barry.yml",
+    ".github/workflows/buf-lint.yml",
+    ".github/workflows/buf.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/container_description.yml",
+    ".github/workflows/fuzzing.yml",
+    ".github/workflows/govulncheck.yml",
+    ".github/workflows/main.yml",
+    ".github/workflows/openapi_viewer.yml",
+    ".github/workflows/upload_openapi.yml",
+    ".github/workflows/zizmor.yml",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/copilot-swe-agent/copilot"
+  ],
+  "excluded_workflows": [
+    "",
+    ".github/workflows/automerge-dependabot.yml",
+    ".github/workflows/check_release_notes.yml",
+    ".github/workflows/codeql-analysis.yml",
+    ".github/workflows/dependency_review.yml",
+    ".github/workflows/konflux_lgtm_label.yml",
+    ".github/workflows/lock.yml",
+    ".github/workflows/prombench.yml",
+    ".github/workflows/repo_sync.yml",
+    ".github/workflows/scorecards.yml",
+    ".github/workflows/stale.yml",
+    "dynamic/dependabot/dependabot-updates",
+    "dynamic/dependabot/update-graph"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/approve-workflows.yml",
+      "runs": 1234,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/buf-lint.yml",
+      "runs": 19,
+      "failed": 1,
+      "pr_runs": 19,
+      "pr_failed": 1
+    },
+    {
+      "path": ".github/workflows/buf.yml",
+      "runs": 406,
+      "failed": 22,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 2561,
+      "failed": 867,
+      "pr_runs": 2115,
+      "pr_failed": 771
+    },
+    {
+      "path": ".github/workflows/container_description.yml",
+      "runs": 5,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/govulncheck.yml",
+      "runs": 516,
+      "failed": 8,
+      "pr_runs": 20,
+      "pr_failed": 1
+    },
+    {
+      "path": ".github/workflows/zizmor.yml",
+      "runs": 3,
+      "failed": 2,
+      "pr_runs": 3,
+      "pr_failed": 2
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 18,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/copilot-swe-agent/copilot",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 4763,
+  "failed": 900,
+  "fail_rate": 0.189,
+  "pr_runs": 2157,
+  "pr_failed": 775,
+  "pr_fail_rate": 0.359,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 18,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "build": 14,
+    "lint": 12,
+    "test": 5,
+    "other": 1
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 30312095247,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-27T22:49:52Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/30312095247",
+      "jobs": [
+        {
+          "job": "Go tests with previous Go version",
+          "failed_steps": [
+            "Run make build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "UI tests",
+          "failed_steps": [
+            "Run make assets-tarball"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28961027054,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-08T17:04:08Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/28961027054",
+      "jobs": [
+        {
+          "job": "UI tests",
+          "failed_steps": [
+            "Run make assets-tarball"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Go tests with previous Go version",
+          "failed_steps": [
+            "Run make build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32386834673,
+      "event": "push",
+      "workflow": ".github/workflows/buf.yml",
+      "created_at": "2026-08-20T15:33:20Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/32386834673",
+      "jobs": [
+        {
+          "job": "lint and publish",
+          "failed_steps": [
+            "Run bufbuild/buf-breaking-action@c57b3d842a5c3f3b454756ef65305a50a587c5ba"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30902361965,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-04T10:51:17Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/30902361965",
+      "jobs": [
+        {
+          "job": "Mixins tests",
+          "failed_steps": [
+            "Run go install ./cmd/promtool/."
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "golangci-lint",
+          "failed_steps": [
+            "Lint"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29394442294,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-15T06:31:08Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/29394442294",
+      "jobs": [
+        {
+          "job": "Go tests on Windows",
+          "failed_steps": [
+            "Run $TestTargets = go list ./... | Where-Object { $_ -NotMatch \"(github.com/prometheus/prometheus/config|github.com/prometheus/prometheus/web)\"}"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29482198265,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-16T08:05:27Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/29482198265",
+      "jobs": [
+        {
+          "job": "Go tests on Windows",
+          "failed_steps": [
+            "Run $TestTargets = go list ./... | Where-Object { $_ -NotMatch \"(github.com/prometheus/prometheus/config|github.com/prometheus/prometheus/web)\"}"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29511267309,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-16T15:28:07Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/29511267309",
+      "jobs": [
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "UI tests",
+          "failed_steps": [
+            "Run make assets-tarball"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Check generated parser",
+          "failed_steps": [
+            "Run make check-generated-promql-functions"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28914507689,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-08T03:06:34Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/28914507689",
+      "jobs": [
+        {
+          "job": "golangci-lint",
+          "failed_steps": [
+            "Lint"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30909653444,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-04T12:33:49Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/30909653444",
+      "jobs": [
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 28997702560,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T06:03:32Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/28997702560",
+      "jobs": [
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Go tests for Prometheus upgrades and downgrades (3.5.4)",
+          "failed_steps": [
+            "Run go test -v --race ./cmd/prometheus/ --test.version-upgrade=true --test.lts-version=3.5.4 -run TestVersionUpgrade"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31175808741,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-08-07T11:52:09Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/31175808741",
+      "jobs": [
+        {
+          "job": "More Go tests",
+          "failed_steps": [
+            "Run go test --tags=dedupelabels ./..."
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        },
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Go tests with previous Go version",
+          "failed_steps": [
+            "Run make test GO_ONLY=1 test-flags=\"\""
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31766574640,
+      "event": "schedule",
+      "workflow": ".github/workflows/govulncheck.yml",
+      "created_at": "2026-08-14T03:21:45Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/31766574640",
+      "jobs": [
+        {
+          "job": "Run govulncheck",
+          "failed_steps": [
+            "Run golang/govulncheck-action@032d45514ae346b1db93c04b0c90b841c370344f"
+          ],
+          "step_category": "other",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30609758888,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-31T06:28:38Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/30609758888",
+      "jobs": [
+        {
+          "job": "golangci-lint",
+          "failed_steps": [
+            "Lint"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29018259574,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T12:28:21Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/29018259574",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30404881461,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-28T22:31:59Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/30404881461",
+      "jobs": [
+        {
+          "job": "Go tests",
+          "failed_steps": [
+            "Run make GO_ONLY=1 SKIP_GOLANGCI_LINT=1"
+          ],
+          "step_category": "lint",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29845787211,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-21T15:49:36Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/29845787211",
+      "jobs": [
+        {
+          "job": "Go tests with previous Go version",
+          "failed_steps": [
+            "Run make build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "UI tests",
+          "failed_steps": [
+            "Run make assets-tarball"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        },
+        {
+          "job": "Check generated parser",
+          "failed_steps": [
+            "Run make check-generated-promql-functions"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": true,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32120978434,
+      "event": "push",
+      "workflow": ".github/workflows/buf.yml",
+      "created_at": "2026-08-18T09:19:21Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/32120978434",
+      "jobs": [
+        {
+          "job": "lint and publish",
+          "failed_steps": [
+            "Run bufbuild/buf-breaking-action@c57b3d842a5c3f3b454756ef65305a50a587c5ba"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 32149677128,
+      "event": "push",
+      "workflow": ".github/workflows/buf.yml",
+      "created_at": "2026-08-18T14:39:33Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/32149677128",
+      "jobs": [
+        {
+          "job": "lint and publish",
+          "failed_steps": [
+            "Run bufbuild/buf-breaking-action@c57b3d842a5c3f3b454756ef65305a50a587c5ba"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29003243881,
+      "event": "pull_request",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-09T07:59:12Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/29003243881",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 29575016805,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-07-17T10:54:05Z",
+      "html_url": "https://github.com/prometheus/prometheus/actions/runs/29575016805",
+      "jobs": [
+        {
+          "job": "Go tests on Windows",
+          "failed_steps": [
+            "Run $TestTargets = go list ./... | Where-Object { $_ -NotMatch \"(github.com/prometheus/prometheus/config|github.com/prometheus/prometheus/web)\"}"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}

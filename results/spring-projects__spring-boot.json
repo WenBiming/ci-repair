@@ -1,0 +1,484 @@
+{
+  "repo": "spring-projects/spring-boot",
+  "license": "Apache-2.0",
+  "stars": 81548,
+  "languages": {
+    "Java": 0.993,
+    "Kotlin": 0.002,
+    "HTML": 0.001,
+    "JavaScript": 0.001,
+    "Groovy": 0.001,
+    "Shell": 0.0,
+    "Ruby": 0.0,
+    "FreeMarker": 0.0,
+    "Batchfile": 0.0,
+    "Go Template": 0.0,
+    "Smarty": 0.0,
+    "Mustache": 0.0,
+    "Dockerfile": 0.0,
+    "Vim Snippet": 0.0,
+    "CSS": 0.0
+  },
+  "significant_languages": [
+    "Java"
+  ],
+  "ci_workflows": [
+    ".github/workflows/build-pull-request.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/verify.yml",
+    ".github/workflows/run-system-tests.yml",
+    ".github/workflows/distribute.yml",
+    "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer",
+    "dynamic/agents/copilot-pull-request-reviewer",
+    ".github/workflows/fix-sdkman-default.yml"
+  ],
+  "excluded_workflows": [
+    ".github/workflows/build-and-deploy-snapshot.yml",
+    ".github/workflows/deploy-docs.yml",
+    ".github/workflows/trigger-docs-build.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/release-milestone.yml",
+    "dynamic/dependabot/dependabot-updates",
+    ".github/workflows/run-codeql-analysis.yml",
+    ".github/workflows/publicize-release.yml"
+  ],
+  "days": 90,
+  "workflows": [
+    {
+      "path": ".github/workflows/build-pull-request.yml",
+      "runs": 458,
+      "failed": 142,
+      "pr_runs": 458,
+      "pr_failed": 142
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "runs": 692,
+      "failed": 138,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/run-system-tests.yml",
+      "runs": 692,
+      "failed": 31,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": "dynamic/agents/copilot-pull-request-reviewer",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    },
+    {
+      "path": ".github/workflows/fix-sdkman-default.yml",
+      "runs": 1,
+      "failed": 0,
+      "pr_runs": 0,
+      "pr_failed": 0
+    }
+  ],
+  "runs": 1844,
+  "failed": 311,
+  "fail_rate": 0.169,
+  "pr_runs": 458,
+  "pr_failed": 142,
+  "pr_fail_rate": 0.31,
+  "sampled_failed_runs": 20,
+  "sampled_with_logs": 13,
+  "compile_share_of_failures": 0.0,
+  "est_compile_failures": 0,
+  "est_compile_fail_rate": 0.0,
+  "failed_step_categories": {
+    "build": 11,
+    "test": 2
+  },
+  "compilers_seen": {},
+  "samples": [
+    {
+      "run_id": 32957075434,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-08-26T10:12:48Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/32957075434",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 30167627481,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-07-25T17:26:23Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/30167627481",
+      "jobs": [
+        {
+          "job": "Build Pull Request",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36392884532,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-09-28T07:39:58Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/36392884532",
+      "jobs": [
+        {
+          "job": "Build Pull Request",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 35997108430,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-09-24T12:07:38Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/35997108430",
+      "jobs": [
+        {
+          "job": "Build Pull Request",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34931723540,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-09-15T05:11:14Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/34931723540",
+      "jobs": [
+        {
+          "job": "Build Pull Request",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33864779121,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-09-04T10:46:04Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33864779121",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33110994258,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-08-27T19:57:58Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33110994258",
+      "jobs": [
+        {
+          "job": "Build Pull Request",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36395912678,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-28T08:11:46Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/36395912678",
+      "jobs": [
+        {
+          "job": "Windows | Java 21",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33209161288,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-08-28T20:39:25Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33209161288",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 32423995941,
+      "event": "push",
+      "workflow": ".github/workflows/run-system-tests.yml",
+      "created_at": "2026-08-20T22:22:56Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/32423995941",
+      "jobs": [
+        {
+          "job": "Java 17",
+          "failed_steps": [
+            "Prepare Gradle Build",
+            "Send Notification"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 33870500651,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-04T11:59:05Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33870500651",
+      "jobs": [
+        {
+          "job": "Windows | Java 21",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": true
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 31026353924,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-08-05T16:40:02Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/31026353924",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 31065997846,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-08-06T02:34:25Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/31065997846",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 33152941953,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-08-28T07:49:58Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/33152941953",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35083572282,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-09-16T10:10:52Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/35083572282",
+      "jobs": [
+        {
+          "job": "Build Pull Request",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 34728256620,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-09-13T00:33:04Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/34728256620",
+      "jobs": [],
+      "log_available": false,
+      "compile_error": false
+    },
+    {
+      "run_id": 35206882122,
+      "event": "push",
+      "workflow": ".github/workflows/ci.yml",
+      "created_at": "2026-09-17T09:45:48Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/35206882122",
+      "jobs": [
+        {
+          "job": "Windows | Java 27",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 36121908499,
+      "event": "push",
+      "workflow": ".github/workflows/run-system-tests.yml",
+      "created_at": "2026-09-25T10:03:52Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/36121908499",
+      "jobs": [
+        {
+          "job": "Java 21",
+          "failed_steps": [
+            "Run System Tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 30162914630,
+      "event": "pull_request",
+      "workflow": ".github/workflows/build-pull-request.yml",
+      "created_at": "2026-07-25T15:05:03Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/30162914630",
+      "jobs": [
+        {
+          "job": "Build Pull Request",
+          "failed_steps": [
+            "Build"
+          ],
+          "step_category": "build",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": false,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    },
+    {
+      "run_id": 29486093727,
+      "event": "push",
+      "workflow": ".github/workflows/run-system-tests.yml",
+      "created_at": "2026-07-16T09:09:31Z",
+      "html_url": "https://github.com/spring-projects/spring-boot/actions/runs/29486093727",
+      "jobs": [
+        {
+          "job": "Java 21",
+          "failed_steps": [
+            "Run System Tests"
+          ],
+          "step_category": "test",
+          "log_available": true,
+          "compile_error": false,
+          "compilers": [],
+          "test_failure": true,
+          "lint_failure": false,
+          "infra": false
+        }
+      ],
+      "log_available": true,
+      "compile_error": false
+    }
+  ]
+}
