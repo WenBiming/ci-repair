@@ -64,6 +64,10 @@ STEP_CATEGORIES = [
                          r"install deps|dependencies", re.I)),
 ]
 
+CONFIGURE_PROBE = (r"(conftest|CMakeScratch|CMakeTmp|TryCompile|CheckIncludeFile|"
+                   r"CheckSymbolExists|CheckFunctionExists|CheckTypeSize|CheckCSource|"
+                   r"apple-sdk|/CMake/[^/ ]+\.c)")
+
 # Compiler-error signatures per toolchain. Matched against job logs.
 COMPILE_ERROR_PATTERNS = {
     "rustc": re.compile(r"^.{0,40}error(\[E\d{4}\])?: (?!test failed|process didn't exit|"
@@ -72,7 +76,10 @@ COMPILE_ERROR_PATTERNS = {
     "go": re.compile(r"^.{0,40}\S+\.go:\d+:\d+: (undefined|cannot use|too many|not enough|"
                      r"missing|declared and not used|imported and not used|syntax error|"
                      r"invalid|assignment mismatch|\S+ redeclared|cannot|unknown field)", re.M),
-    "gcc_clang": re.compile(r"\S+\.(c|cc|cpp|cxx|h|hpp|hh):\d+:\d+: (fatal )?error:"),
+    # Skips autoconf/CMake feature probes (conftest.c, TryCompile, Check*.c), which
+    # fail on purpose and appear in almost every configure log.
+    "gcc_clang": re.compile(r"(?<!\S)(?!\S*" + CONFIGURE_PROBE + r")"
+                            r"\S+\.(c|cc|cpp|cxx|h|hpp|hh):\d+:\d+: (fatal )?error:"),
     "linker": re.compile(r"undefined reference to|ld(\.lld)?: error:|ld returned \d exit status|"
                          r"Undefined symbols for architecture"),
     "javac": re.compile(r"(\S+\.java:\[?\d+[,:\]]|\[ERROR\] .*\.java:\[\d+,\d+\]).{0,5}"
@@ -210,6 +217,9 @@ def analyse_log(text):
         lint_origin = "clippy::" in text or "-D warnings" in text or "#[deny(" in text
         if "could not compile" not in text or lint_origin:
             hits["rustc"] = 0
+    # Linker errors without a real C/C++ error usually come from configure probes.
+    if hits["linker"] and not hits["gcc_clang"] and re.search(CONFIGURE_PROBE, text):
+        hits["linker"] = 0
     other = {k: bool(rx.search(text)) for k, rx in OTHER_SIGNALS.items()}
     compilers = sorted(k for k, v in hits.items() if v and k != "rustc_strict")
     if hits["rustc_strict"]:

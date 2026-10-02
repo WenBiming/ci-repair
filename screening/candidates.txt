@@ -21,7 +21,7 @@ prometheus/prometheus
 hashicorp/terraform
 etcd-io/etcd
 cli/cli
-gitea/gitea
+go-gitea/gitea
 traefik/traefik
 
 # --- Java / Maven or Gradle ---
